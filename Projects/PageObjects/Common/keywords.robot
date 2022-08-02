@@ -38,7 +38,6 @@ Login With Valid Credentials
     END
     ${haveNotRememberPassBtn}  Run Keyword And Return Status  Wait Until Page Contains Element  ${NotRememberPass}
     IF  ${haveNotRememberPassBtn} == True  Click Button  ${NotRememberPass}
-    # Click Button  //button[@id='webauthn-maybe-later-link']
     # Wait For Condition  return document.readyState=="complete"  30s
 
 Open Ebay HomePage And Login Successfully

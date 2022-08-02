@@ -46,9 +46,8 @@ Search Item And Add To The Cart
     [Tags]  test8
     Search For  Sneaker
     Choose "Women" As Gender
-    # Chose Condition "New with tags" ỏ dau day
-    Choose Condition Of Item  Condition  New with tags
-    Filter Price Of Item  Best Match  Price + Shipping: highest first  
+    Choose "New with tags" As Condition Of Item
+    Choose "Price + Shipping: highest first" As Filter Price
     Display Choosed Item
     Add Item To The Cart
 

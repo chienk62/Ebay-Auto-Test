@@ -1,6 +1,7 @@
 *** Settings ***
 Library  Selenium2Library
 Variables  locators.py
+Resource  ../../PageObjects/Common/keywords.robot
 
 *** Variables ***
 
@@ -13,7 +14,7 @@ Search For
     Sleep  1s
 
 Open Ebay Default Search Page
-    Keywords.Open Ebay Home Page
+    Open Ebay Home Page
     Search For  Sneaker
 
 Verify Page Displays Grid View As Default
@@ -65,7 +66,7 @@ Click Category Box
     Sleep  1s
 
 Click Search Icon
-    Click Element  //input[@value='Search']  CTRL
+    Click Element  ${SearchIcon}  CTRL
 
 Verify Each Category On Search Page
     ${allCatgory}  Get WebElements  ${AllCategory}
@@ -80,39 +81,30 @@ Verify Each Category On Search Page
         Switch Window  MAIN
     END
 
-Verify Default Status Search
-    Page Should Contain Element  //*[text()='Selected category']/parent::*[text()='All']
-    Page Should Not Contain Element  //span[text()='Remove filter']
-    Sleep  1s 
-    Checkbox Should Not Be Selected  
-
 Choose "${gender}" As Gender
     Click Element  //span[text()='${gender}']
     Sleep  2s
 
-Choose Condition Of Item
-    [Arguments]  ${Conditions}  ${ConditionType}  
-    Wait Until Page Contains Element  //span[@class= 'filter-menu-button__button-text' and text()='${Conditions}']
-    Click Element  //span[@class= 'filter-menu-button__button-text' and text()='${Conditions}']
-    Sleep  2s
-    Click Element  //span[@class= 'filter-menu-button__text' and text()='${ConditionType}']
-    Sleep  2s
-
-Filter Price Of Item
-    [Arguments]  ${BestMatch}  ${ChooseType}
-    # Filter Price span[@class='expand-btn__cell']//span[@class='expand-btn__cell']/
-    Click Element  //span[text()='${BestMatch}']
-    Sleep  2s
-    Click Element  //a[@class='fake-menu-button__item']/span[text()='${ChooseType}']
+Choose "${conditionType}" As Condition Of Item
+    [Arguments]  ${Conditions}
+    Wait Until Page Contains Element  ${ConditionBtn}
+    Click Element  ${ConditionBtn}
+    Wait Until Page Contains Element  //span[@class= 'filter-menu-button__text' and text()='${conditionType}']
+    Click Element  //span[@class= 'filter-menu-button__text' and text()='${conditionType}']
     Sleep  2s
 
-Display Choosed Item
+Choose "${price}" As Filter Price
+    Click Element  ${BestMatch}
+    Wait Until Page Contains Element  //a[@class='fake-menu-button__item']/span[text()='${price}']
+    Click Element  //a[@class='fake-menu-button__item']/span[text()='${price}']
+    Sleep  1s
+
+View First Item In New Window
     Click Element  ${PriceSneaker}
-    Sleep  2s
+    Switch Window  NEW
+    Sleep  1s
 
 Add Item To The Cart
-    Switch Window  NEW  
-    Sleep  15s
-    # Page Should Contain Element  ${AddToCart}
+    Wait Until Page Contains Element  ${AddToCart}
     Click Element  ${AddToCart}
     Sleep  2s
