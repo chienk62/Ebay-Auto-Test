@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220802 16:57:25.969" rpa="false" schemaversion="3">
+<suite id="s1" name="CheckMessagePage" source="D:\Python\Robot\Projects\Tests\MessagePage\CheckMessagePage.robot">
+<test id="s1-t1" name="Successfully Delete A Message" line="29">
+<kw name="Open Ebay Message Screen" library="keywords" type="SETUP">
+<kw name="Open Ebay Home Page" library="keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<arg>options=add_argument("--disable-site-isolation-trials")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220802 16:57:26.281" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20220802 16:57:26.280" endtime="20220802 16:57:40.868"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220802 16:57:41.882" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 16:57:40.869" endtime="20220802 16:57:41.882"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220802 16:57:41.882" endtime="20220802 16:57:42.578"/>
+</kw>
+<status status="PASS" starttime="20220802 16:57:26.279" endtime="20220802 16:57:42.578"/>
+</kw>
+<kw name="Login With Valid Credentials" library="keywords">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${LoginBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:57:42.580" level="INFO">Clicking element '//*[@id='gh-ug']/a'.</msg>
+<status status="PASS" starttime="20220802 16:57:42.579" endtime="20220802 16:57:46.049"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${LoginUsername}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220802 16:57:46.049" endtime="20220802 16:57:46.077"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${LoginUsername}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 16:57:46.078" level="INFO">Typing text 'vickyy24599@gmail.com' into text field '//*[@id='userid']'.</msg>
+<status status="PASS" starttime="20220802 16:57:46.077" endtime="20220802 16:57:46.216"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>None</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220802 16:57:46.217" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20220802 16:57:46.217" level="INFO">Pressing special key RETURN to browser.</msg>
+<msg timestamp="20220802 16:57:46.218" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220802 16:57:46.217" endtime="20220802 16:57:46.230"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220802 16:57:48.245" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220802 16:57:46.230" endtime="20220802 16:57:48.245"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${LoginPassword}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220802 16:57:48.246" endtime="20220802 16:57:48.278"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>${LoginPassword}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 16:57:48.279" level="INFO">Typing password into text field '//*[@id='pass']'.</msg>
+<msg timestamp="20220802 16:57:48.321" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220802 16:57:48.356" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220802 16:57:48.278" endtime="20220802 16:57:48.356"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>None</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220802 16:57:48.357" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20220802 16:57:48.357" level="INFO">Pressing special key RETURN to browser.</msg>
+<msg timestamp="20220802 16:57:48.357" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220802 16:57:48.356" endtime="20220802 16:57:48.365"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>${LoginPassword}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<msg timestamp="20220802 16:57:52.262" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20220802 16:57:48.365" endtime="20220802 16:57:52.483"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${havePassBtn}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${LoginPassword}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${LoginPassword}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220802 16:57:52.654" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-92.png"&gt;&lt;img src="selenium-screenshot-92.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220802 16:57:52.655" level="FAIL">Page should have contained element '//*[@id='pass']' but did not.</msg>
+<status status="FAIL" starttime="20220802 16:57:52.484" endtime="20220802 16:57:52.657"/>
+</kw>
+<msg timestamp="20220802 16:57:52.657" level="INFO">${havePassBtn} = False</msg>
+<status status="PASS" starttime="20220802 16:57:52.484" endtime="20220802 16:57:52.657"/>
+</kw>
+<if>
+<branch type="IF" condition="${havePassBtn} == True">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${LoginPassword}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.657" endtime="20220802 16:57:52.657"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>None</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.657" endtime="20220802 16:57:52.657"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${haveText}</var>
+<arg>Page Should Contain</arg>
+<arg>${USERNAME}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.657" endtime="20220802 16:57:52.657"/>
+</kw>
+<if>
+<branch type="IF" condition="${haveText} == True">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${GetSecurityCodeByText}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${VerifyBtn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${VerifyBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</kw>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</branch>
+<status status="NOT RUN" starttime="20220802 16:57:52.657" endtime="20220802 16:57:52.658"/>
+</if>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${haveNotRememberPassBtn}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${NotRememberPass}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</kw>
+<if>
+<branch type="IF" condition="${haveNotRememberPassBtn} == True">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${NotRememberPass}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</kw>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</branch>
+<status status="NOT RUN" starttime="20220802 16:57:52.658" endtime="20220802 16:57:52.658"/>
+</if>
+<status status="NOT RUN" starttime="20220802 16:57:52.657" endtime="20220802 16:57:52.658"/>
+</branch>
+<status status="PASS" starttime="20220802 16:57:52.657" endtime="20220802 16:57:52.658"/>
+</if>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${haveNotRememberPassBtn}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${NotRememberPass}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${NotRememberPass}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220802 16:57:52.659" endtime="20220802 16:57:52.672"/>
+</kw>
+<msg timestamp="20220802 16:57:52.672" level="INFO">${haveNotRememberPassBtn} = True</msg>
+<status status="PASS" starttime="20220802 16:57:52.659" endtime="20220802 16:57:52.672"/>
+</kw>
+<if>
+<branch type="IF" condition="${haveNotRememberPassBtn} == True">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${NotRememberPass}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220802 16:57:52.673" level="INFO">Clicking button '//button[@id='webauthn-maybe-later-link']'.</msg>
+<status status="PASS" starttime="20220802 16:57:52.672" endtime="20220802 16:57:53.808"/>
+</kw>
+<status status="PASS" starttime="20220802 16:57:52.672" endtime="20220802 16:57:53.809"/>
+</branch>
+<status status="PASS" starttime="20220802 16:57:52.672" endtime="20220802 16:57:53.809"/>
+</if>
+<status status="PASS" starttime="20220802 16:57:42.578" endtime="20220802 16:57:53.809"/>
+</kw>
+<kw name="Open Message Screen" library="keywords">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${MyEbayBtn}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220802 16:57:53.810" endtime="20220802 16:57:53.852"/>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>${MyEbayBtn}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220802 16:57:53.853" level="INFO">Simulating Mouse Over on element '//*[@class='gh-eb-li-a gh-rvi-menu']'.</msg>
+<status status="PASS" starttime="20220802 16:57:53.852" endtime="20220802 16:57:54.210"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${MessageBtn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220802 16:57:54.210" endtime="20220802 16:57:54.280"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${MessageBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:57:54.281" level="INFO">Clicking element '//a[text()=' Messages']'.</msg>
+<status status="PASS" starttime="20220802 16:57:54.280" endtime="20220802 16:58:00.700"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220802 16:58:01.712" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 16:58:00.700" endtime="20220802 16:58:01.712"/>
+</kw>
+<status status="PASS" starttime="20220802 16:57:53.809" endtime="20220802 16:58:01.712"/>
+</kw>
+<status status="PASS" starttime="20220802 16:57:26.279" endtime="20220802 16:58:01.712"/>
+</kw>
+<kw name="Click Checkbox Of First Message" library="keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${passed}</var>
+<arg>Inbox Is Not Blank</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Inbox Is Not Blank" library="keywords">
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<arg>You do not have any messages</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20220802 16:58:02.098" level="INFO">Current page does not contain text 'You do not have any messages'.</msg>
+<status status="PASS" starttime="20220802 16:58:01.715" endtime="20220802 16:58:02.098"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220802 16:58:03.113" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 16:58:02.099" endtime="20220802 16:58:03.113"/>
+</kw>
+<status status="PASS" starttime="20220802 16:58:01.714" endtime="20220802 16:58:03.114"/>
+</kw>
+<msg timestamp="20220802 16:58:03.114" level="INFO">${passed} = True</msg>
+<status status="PASS" starttime="20220802 16:58:01.714" endtime="20220802 16:58:03.114"/>
+</kw>
+<if>
+<branch type="IF" condition="${passed} == True">
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${Checkbox})[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:58:03.116" level="INFO">Clicking element '(//*[@name='LineID'])[1]'.</msg>
+<status status="PASS" starttime="20220802 16:58:03.115" endtime="20220802 16:58:03.206"/>
+</kw>
+<status status="PASS" starttime="20220802 16:58:03.115" endtime="20220802 16:58:03.206"/>
+</branch>
+<status status="PASS" starttime="20220802 16:58:03.114" endtime="20220802 16:58:03.206"/>
+</if>
+<kw name="Checkbox Should Be Selected" library="Selenium2Library">
+<arg>${checkBox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20220802 16:58:03.207" level="INFO">Verifying checkbox '//*[@name='LineID']' is selected.</msg>
+<status status="PASS" starttime="20220802 16:58:03.206" endtime="20220802 16:58:03.277"/>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<var>${ID}</var>
+<arg>(${Checkbox})[1]</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220802 16:58:03.305" level="INFO">${ID} = 160587532715_c</msg>
+<status status="PASS" starttime="20220802 16:58:03.277" endtime="20220802 16:58:03.305"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${ID}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220802 16:58:03.306" level="INFO">${ID} = 160587532715_c</msg>
+<status status="PASS" starttime="20220802 16:58:03.305" endtime="20220802 16:58:03.306"/>
+</kw>
+<status status="PASS" starttime="20220802 16:58:01.713" endtime="20220802 16:58:03.306"/>
+</kw>
+<kw name="Click Delete Button" library="keywords">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${DelBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:58:03.307" level="INFO">Clicking element '//*[@id='del-btn']/button'.</msg>
+<status status="PASS" starttime="20220802 16:58:03.307" endtime="20220802 16:58:05.083"/>
+</kw>
+<kw name="Wait For Condition" library="Selenium2Library">
+<arg>return document.readyState=="complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220802 16:58:05.083" endtime="20220802 16:58:05.091"/>
+</kw>
+<status status="PASS" starttime="20220802 16:58:03.306" endtime="20220802 16:58:05.092"/>
+</kw>
+<kw name="Successfully Delete A Message" library="keywords">
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>You moved one or more messages to folder "Trash"</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220802 16:58:05.156" level="INFO">Current page contains text 'You moved one or more messages to folder "Trash"'.</msg>
+<status status="PASS" starttime="20220802 16:58:05.094" endtime="20220802 16:58:05.156"/>
+</kw>
+<status status="PASS" starttime="20220802 16:58:05.093" endtime="20220802 16:58:05.156"/>
+</kw>
+<kw name="Verify If Delete Message Go To Trash" library="keywords">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${TrashBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:58:05.158" level="INFO">Clicking element '//*[@id='ebay-f-trash']/a'.</msg>
+<status status="PASS" starttime="20220802 16:58:05.157" endtime="20220802 16:58:06.237"/>
+</kw>
+<kw name="Wait For Condition" library="Selenium2Library">
+<arg>return document.readyState=="complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220802 16:58:06.237" endtime="20220802 16:58:06.269"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//input[@id='${ID}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220802 16:58:06.294" level="INFO">Element '//input[@id='160587532715_c']' is displayed.</msg>
+<status status="PASS" starttime="20220802 16:58:06.270" endtime="20220802 16:58:06.294"/>
+</kw>
+<status status="PASS" starttime="20220802 16:58:05.157" endtime="20220802 16:58:06.294"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220802 16:58:06.295" endtime="20220802 16:58:09.225"/>
+</kw>
+<tag>test5</tag>
+<status status="PASS" starttime="20220802 16:57:26.278" endtime="20220802 16:58:09.226"/>
+</test>
+<status status="PASS" starttime="20220802 16:57:25.972" endtime="20220802 16:58:09.228"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">test5</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CheckMessagePage">CheckMessagePage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
