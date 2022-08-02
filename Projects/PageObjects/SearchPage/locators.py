@@ -16,3 +16,12 @@ CloseCustomize = "//*[@class='icon-btn lightbox-dialog__close' and @aria-label='
 FirstItem = "(//ul[@class='srp-results srp-grid clearfix']//div[@class='s-item__image'])[1]//img"
 AllCategory = "//select[@class='gh-sb ']/option"
 TitleName = "//h1"
+
+
+AdvSearchInput = "//*[@id='_nkw']"
+AdvSearchExclude = "//*[@id='_ex_kw']"
+AdvSearchCategories = "//*[@id='e1-1']"
+AdvSearchSubmit = "//*[@class='btn btn-prim'][1]"
+SearchPageFirstItem = "(//*[@id='ListViewInner']/li/h3/a)[1]"
+#"//*[@id='MessageContainer']/*"
+SearchPageWarnMessage = "//*[contains(text(),'0 results')]"

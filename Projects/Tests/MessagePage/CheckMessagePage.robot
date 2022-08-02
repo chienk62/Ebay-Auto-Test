@@ -1,5 +1,5 @@
 ***Settings***
-Library  Selenium2Library
+Library  SeleniumLibrary
 Resource  ../../PageObjects/Common/keywords.robot
 Resource  ../../PageObjects/MessagePage/keywords.robot
 Test Setup  Open Ebay Message Screen

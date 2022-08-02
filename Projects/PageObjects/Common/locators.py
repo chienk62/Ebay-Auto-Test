@@ -1,4 +1,4 @@
-URL = "https://www.ebay.com/"
+# URL = "https://www.ebay.com/"
 LoginBtn = "//*[@id='gh-ug']/a"
 LoginUsername = "//*[@id='userid']"
 LoginPassword = "//*[@id='pass']"

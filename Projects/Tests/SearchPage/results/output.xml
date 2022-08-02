@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220803 06:10:51.148" rpa="false" schemaversion="3">
+<suite id="s1" name="CheckSearchPage" source="F:\Office\Fsoft\RobotFramework\Ebay-Auto-Test\Projects\Tests\SearchPage\CheckSearchPage.robot">
+<kw name="Open Ebay Home Page" library="keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<arg>options=add_argument("--disable-site-isolation-trials")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 06:10:51.826" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20220803 06:10:51.825" endtime="20220803 06:10:58.004"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<arg>30s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220803 06:10:58.004" endtime="20220803 06:10:58.013"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220803 06:10:58.013" endtime="20220803 06:10:58.168"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220803 06:10:58.168" endtime="20220803 06:10:58.169"/>
+</kw>
+<status status="PASS" starttime="20220803 06:10:51.824" endtime="20220803 06:10:58.170"/>
+</kw>
+<test id="s1-t1" name="Search Item And Add To The Cart" line="45">
+<kw name="Search For &quot;Sneaker&quot; In &quot;All Categories&quot;" library="keywords" sourcename="Search For &quot;${input}&quot; In &quot;${category}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id='gh-btn']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220803 06:10:58.173" endtime="20220803 06:10:58.208"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${InputText}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 06:10:58.209" level="INFO">Typing text 'Sneaker' into text field '//input[@class='gh-tb ui-autocomplete-input']'.</msg>
+<status status="PASS" starttime="20220803 06:10:58.209" endtime="20220803 06:10:58.333"/>
+</kw>
+<if>
+<branch type="IF" condition="'${category}' != 'All Categories'">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>//*[@id='gh-cat']</arg>
+<arg>${category}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20220803 06:10:58.333" endtime="20220803 06:10:58.334"/>
+</kw>
+<status status="NOT RUN" starttime="20220803 06:10:58.333" endtime="20220803 06:10:58.334"/>
+</branch>
+<status status="PASS" starttime="20220803 06:10:58.333" endtime="20220803 06:10:58.334"/>
+</if>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id='gh-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:10:58.334" level="INFO">Clicking element '//*[@id='gh-btn']'.</msg>
+<status status="PASS" starttime="20220803 06:10:58.334" endtime="20220803 06:11:02.332"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<arg>30s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220803 06:11:02.333" endtime="20220803 06:11:02.348"/>
+</kw>
+<status status="PASS" starttime="20220803 06:10:58.172" endtime="20220803 06:11:02.348"/>
+</kw>
+<kw name="Select Subcategory &quot;Women&quot; On Search Page" library="keywords" sourcename="Select Subcategory &quot;${subcategory}&quot; On Search Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//li[@class='srp-refine__category__item']//*[text()='${subcategory}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:02.350" level="INFO">Clicking element '//li[@class='srp-refine__category__item']//*[text()='Women']'.</msg>
+<status status="PASS" starttime="20220803 06:11:02.349" endtime="20220803 06:11:04.778"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220803 06:11:04.779" endtime="20220803 06:11:04.789"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:02.349" endtime="20220803 06:11:04.789"/>
+</kw>
+<kw name="Filter By Condition &quot;New with tags&quot; On Search Page" library="keywords" sourcename="Filter By Condition &quot;${condition}&quot; On Search Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[text()='Condition']/../parent::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:04.791" level="INFO">Clicking element '//*[text()='Condition']/../parent::button'.</msg>
+<status status="PASS" starttime="20220803 06:11:04.791" endtime="20220803 06:11:05.164"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[text()='${condition}']/parent::*[@role='menuitemcheckbox']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220803 06:11:05.165" endtime="20220803 06:11:05.218"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[text()='${condition}']/parent::*[@role='menuitemcheckbox']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:05.219" level="INFO">Clicking element '//*[text()='New with tags']/parent::*[@role='menuitemcheckbox']'.</msg>
+<status status="PASS" starttime="20220803 06:11:05.218" endtime="20220803 06:11:07.498"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>//*[text()='${condition}']/parent::*[@role='menuitemcheckbox']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220803 06:11:07.498" endtime="20220803 06:11:07.731"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:04.790" endtime="20220803 06:11:07.732"/>
+</kw>
+<kw name="Sort Items By &quot;Price + Shipping: highest first&quot;" library="keywords" sourcename="Sort Items By &quot;${type of sorting}&quot;">
+<if>
+<branch type="IF" condition="'${type of sorting}' != 'Best Match'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='srp-controls__sort-label']/..</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:07.736" level="INFO">Clicking element '//*[@class='srp-controls__sort-label']/..'.</msg>
+<status status="PASS" starttime="20220803 06:11:07.735" endtime="20220803 06:11:07.985"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[text()='${type of sorting}']/parent::*[@class='fake-menu-button__item']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:07.986" level="INFO">Clicking element '//span[text()='Price + Shipping: highest first']/parent::*[@class='fake-menu-button__item']'.</msg>
+<status status="PASS" starttime="20220803 06:11:07.986" endtime="20220803 06:11:10.099"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<arg>30s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220803 06:11:10.099" endtime="20220803 06:11:10.109"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:07.735" endtime="20220803 06:11:10.109"/>
+</branch>
+<status status="PASS" starttime="20220803 06:11:07.735" endtime="20220803 06:11:10.109"/>
+</if>
+<status status="PASS" starttime="20220803 06:11:07.734" endtime="20220803 06:11:10.109"/>
+</kw>
+<kw name="Select And Verify Item Number &quot;1&quot; From Search Results" library="keywords" sourcename="Select And Verify Item Number &quot;${number}&quot; From Search Results">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${list item title}</var>
+<arg>(//*[@id='srp-river-results']//h3)[${number}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:10.467" level="INFO">${list item title} = Comfortiva Sneakers</msg>
+<status status="PASS" starttime="20220803 06:11:10.111" endtime="20220803 06:11:10.467"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//*[@id='srp-river-results']//h3/parent::a)[${number}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:10.468" level="INFO">Clicking element '(//*[@id='srp-river-results']//h3/parent::a)[1]'.</msg>
+<status status="PASS" starttime="20220803 06:11:10.467" endtime="20220803 06:11:10.846"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220803 06:11:10.846" endtime="20220803 06:11:10.857"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<arg>30s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220803 06:11:10.857" endtime="20220803 06:11:13.452"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item page title}</var>
+<arg>//*[@class='x-item-title__mainTitle']/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:13.922" level="INFO">${item page title} = Comfortiva Sneakers</msg>
+<status status="PASS" starttime="20220803 06:11:13.453" endtime="20220803 06:11:13.922"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${list item title}</arg>
+<arg>${item page title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220803 06:11:13.922" endtime="20220803 06:11:13.923"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:10.110" endtime="20220803 06:11:13.923"/>
+</kw>
+<kw name="Select Variations For Item" library="keywords">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>(//select[contains(@id,'msku')])</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220803 06:11:13.973" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20220803 06:11:13.924" endtime="20220803 06:11:13.973"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//select[contains(@id,'msku')])[${i+1}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:13.975" level="INFO">Clicking element '(//select[contains(@id,'msku')])[1]'.</msg>
+<status status="PASS" starttime="20220803 06:11:13.974" endtime="20220803 06:11:14.302"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//select[contains(@id,'msku')])[${i+1}]/option[not(@disabled) and @id][1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220803 06:11:14.302" endtime="20220803 06:11:14.418"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//select[contains(@id,'msku')])[${i+1}]/option[not(@disabled) and @id][1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:14.420" level="INFO">Clicking element '(//select[contains(@id,'msku')])[1]/option[not(@disabled) and @id][1]'.</msg>
+<status status="PASS" starttime="20220803 06:11:14.418" endtime="20220803 06:11:14.473"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:13.973" endtime="20220803 06:11:14.474"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//select[contains(@id,'msku')])[${i+1}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:14.477" level="INFO">Clicking element '(//select[contains(@id,'msku')])[2]'.</msg>
+<status status="PASS" starttime="20220803 06:11:14.474" endtime="20220803 06:11:14.618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//select[contains(@id,'msku')])[${i+1}]/option[not(@disabled) and @id][1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220803 06:11:14.618" endtime="20220803 06:11:14.660"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//select[contains(@id,'msku')])[${i+1}]/option[not(@disabled) and @id][1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:14.662" level="INFO">Clicking element '(//select[contains(@id,'msku')])[2]/option[not(@disabled) and @id][1]'.</msg>
+<status status="PASS" starttime="20220803 06:11:14.660" endtime="20220803 06:11:14.709"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:14.474" endtime="20220803 06:11:14.709"/>
+</iter>
+<status status="PASS" starttime="20220803 06:11:13.973" endtime="20220803 06:11:14.709"/>
+</for>
+<status status="PASS" starttime="20220803 06:11:13.924" endtime="20220803 06:11:14.709"/>
+</kw>
+<kw name="Add To Cart And Verify Item" library="keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item page title}</var>
+<arg>//*[@class='x-item-title__mainTitle']/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:14.751" level="INFO">${item page title} = Comfortiva Sneakers</msg>
+<status status="PASS" starttime="20220803 06:11:14.711" endtime="20220803 06:11:14.751"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item page price}</var>
+<arg>//*[@id='prcIsum']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:14.934" level="INFO">${item page price} = US $95,165.00</msg>
+<status status="PASS" starttime="20220803 06:11:14.751" endtime="20220803 06:11:14.934"/>
+</kw>
+<kw name="Click &quot;Add to cart&quot; Button On Item Page" library="keywords" sourcename="Click &quot;${button}&quot; Button On Item Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@role='button' and contains(text(),'${button}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:14.935" level="INFO">Clicking element '//*[@role='button' and contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20220803 06:11:14.935" endtime="20220803 06:11:17.601"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<arg>30s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220803 06:11:17.601" endtime="20220803 06:11:17.612"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:14.934" endtime="20220803 06:11:17.612"/>
+</kw>
+<kw name="Verify &quot;Shopping cart&quot; Page is Open" library="keywords" sourcename="Verify &quot;${name}&quot; Page is Open">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//h1[contains(text(),'${name}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220803 06:11:17.632" level="INFO">Current page contains element '//h1[contains(text(),'Shopping cart')]'.</msg>
+<status status="PASS" starttime="20220803 06:11:17.614" endtime="20220803 06:11:17.632"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:17.613" endtime="20220803 06:11:17.632"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cart item title}</var>
+<arg>(//span[@class='BOLD'])[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:17.673" level="INFO">${cart item title} = Comfortiva Sneakers</msg>
+<status status="PASS" starttime="20220803 06:11:17.633" endtime="20220803 06:11:17.674"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cart item price}</var>
+<arg>(//*[@class='item-price'])[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220803 06:11:17.710" level="INFO">${cart item price} = US $95,165.00</msg>
+<status status="PASS" starttime="20220803 06:11:17.674" endtime="20220803 06:11:17.710"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item page title}</arg>
+<arg>${cart item title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220803 06:11:17.710" endtime="20220803 06:11:17.711"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${item page price}</arg>
+<arg>${cart item price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220803 06:11:17.711" endtime="20220803 06:11:17.711"/>
+</kw>
+<status status="PASS" starttime="20220803 06:11:14.710" endtime="20220803 06:11:17.711"/>
+</kw>
+<tag>test8</tag>
+<status status="PASS" starttime="20220803 06:10:58.170" endtime="20220803 06:11:17.712"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220803 06:11:17.716" endtime="20220803 06:11:19.957"/>
+</kw>
+<status status="PASS" starttime="20220803 06:10:51.152" endtime="20220803 06:11:19.957"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">test8</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CheckSearchPage">CheckSearchPage</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220803 06:10:51.756" level="ERROR">Error in file 'F:\Office\Fsoft\RobotFramework\Ebay-Auto-Test\Projects\PageObjects\Common\keywords.robot' on line 3: Library '..\..\Resources\KeyConverter.py' does not exist.</msg>
+<msg timestamp="20220803 06:10:51.774" level="ERROR">Error in file 'F:\Office\Fsoft\RobotFramework\Ebay-Auto-Test\Projects\PageObjects\Common\keywords.robot' on line 5: Variable file '..\..\Resources\Data.py' does not exist.</msg>
+</errors>
+</robot>
