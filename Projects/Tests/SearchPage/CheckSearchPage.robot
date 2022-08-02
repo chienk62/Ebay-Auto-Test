@@ -44,8 +44,8 @@ Successfully Access Right Search Page Each Catgory
 
 Search Item And Add To The Cart
     [Tags]  test8
-    Search For Item
-    Choose Gender  Women 
+    Search For  Sneaker
+    Choose "Women" As Gender
     # Chose Condition "New with tags" ỏ dau day
     Choose Condition Of Item  Condition  New with tags
     Filter Price Of Item  Best Match  Price + Shipping: highest first  

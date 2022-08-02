@@ -1,2024 +1,1995 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220801 14:29:18.429" rpa="false" schemaversion="3">
-<suite id="s1" name="CheckSearchPage" source="D:\Python\Robot\Projects\Tests\SearchPage\CheckSearchPage.robot">
-<test id="s1-t1" name="Successfully Access Right Search Page Each Catgory" line="35">
-<kw name="Open Ebay Default Search Page" library="keywords" type="SETUP">
-<kw name="Open Ebay Home Page" library="keywords">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220802 23:14:55.352" rpa="false" schemaversion="3">
+<suite id="s1" name="CheckSearchPage" source="C:\Users\84329\Documents\GitHub\Ebay-Auto-Test\Projects\Tests\SearchPage\CheckSearchPage.robot">
+<test id="s1-t1" name="Successfully Access Right Search Page Each Catgory" line="41">
+<kw name="Open Ebay Home Page" library="keywords" type="SETUP">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <arg>options=add_argument("--disable-site-isolation-trials")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220801 14:29:18.720" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20220801 14:29:18.719" endtime="20220801 14:29:22.323"/>
+<msg timestamp="20220802 23:14:55.661" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20220802 23:14:55.660" endtime="20220802 23:14:59.130"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:23.327" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:22.324" endtime="20220801 14:29:23.327"/>
+<msg timestamp="20220802 23:15:00.143" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:14:59.131" endtime="20220802 23:15:00.143"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220801 14:29:23.327" endtime="20220801 14:29:24.224"/>
+<status status="PASS" starttime="20220802 23:15:00.143" endtime="20220802 23:15:00.936"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:18.719" endtime="20220801 14:29:24.224"/>
+<status status="PASS" starttime="20220802 23:14:55.660" endtime="20220802 23:15:00.937"/>
 </kw>
-<kw name="Search For" library="keywords">
-<arg>Sneaker</arg>
-<kw name="Input Text" library="Selenium2Library">
-<arg>${InputText}</arg>
-<arg>${searchText}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:24.226" level="INFO">Typing text 'Sneaker' into text field '//input[@class='gh-tb ui-autocomplete-input']'.</msg>
-<status status="PASS" starttime="20220801 14:29:24.225" endtime="20220801 14:29:24.466"/>
-</kw>
-<kw name="Press Keys" library="Selenium2Library">
-<arg>NONE</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220801 14:29:24.467" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
-<msg timestamp="20220801 14:29:24.467" level="INFO">Pressing special key RETURN to browser.</msg>
-<msg timestamp="20220801 14:29:24.467" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20220801 14:29:24.466" endtime="20220801 14:29:27.354"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:28.362" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:27.354" endtime="20220801 14:29:28.362"/>
-</kw>
-<status status="PASS" starttime="20220801 14:29:24.224" endtime="20220801 14:29:28.362"/>
-</kw>
-<status status="PASS" starttime="20220801 14:29:18.718" endtime="20220801 14:29:28.362"/>
-</kw>
-<kw name="Successfully Access Right Search Page Each Catgory" library="keywords">
+<kw name="Verify Each Category On Search Page" library="keywords">
 <kw name="Get WebElements" library="Selenium2Library">
 <var>${allCatgory}</var>
 <arg>${AllCategory}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20220801 14:29:28.380" level="INFO">${allCatgory} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="d9dc7518-a738-4904-9fbe-815ce8693e79")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20220801 14:29:28.362" endtime="20220801 14:29:28.381"/>
+<msg timestamp="20220802 23:15:01.006" level="INFO">${allCatgory} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="3ce362cd-2865-4c56-9dd6-9f6d4261e13c")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220802 23:15:00.943" endtime="20220802 23:15:01.007"/>
 </kw>
 <for flavor="IN">
 <var>${category}</var>
 <value>@{allCatgory}</value>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="d9dc7518-a738-4904-9fbe-815ce8693e79")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="3ce362cd-2865-4c56-9dd6-9f6d4261e13c")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:28.381" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:29:28.381" endtime="20220801 14:29:28.515"/>
+<msg timestamp="20220802 23:15:01.008" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:01.008" endtime="20220802 23:15:01.208"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:29.524" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:28.515" endtime="20220801 14:29:29.524"/>
+<msg timestamp="20220802 23:15:02.225" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:01.209" endtime="20220802 23:15:02.225"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:29.524" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="d9dc7518-a738-4904-9fbe-815ce8693e79")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:29:29.524" endtime="20220801 14:29:29.558"/>
+<msg timestamp="20220802 23:15:02.226" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="3ce362cd-2865-4c56-9dd6-9f6d4261e13c")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:02.225" endtime="20220802 23:15:03.081"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:30.563" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:29.559" endtime="20220801 14:29:30.563"/>
+<msg timestamp="20220802 23:15:04.093" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:03.081" endtime="20220802 23:15:04.093"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:30.565" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:29:30.564" endtime="20220801 14:29:30.918"/>
+<msg timestamp="20220802 23:15:04.093" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:04.093" endtime="20220802 23:15:05.160"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:30.918" endtime="20220801 14:29:30.943"/>
+<status status="PASS" starttime="20220802 23:15:05.160" endtime="20220802 23:15:05.193"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:29:30.943" endtime="20220801 14:29:33.590"/>
+<status status="PASS" starttime="20220802 23:15:05.193" endtime="20220802 23:15:07.827"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:29:33.590" endtime="20220801 14:29:33.621"/>
+<status status="PASS" starttime="20220802 23:15:07.827" endtime="20220802 23:15:07.958"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:33.622" endtime="20220801 14:29:33.637"/>
+<status status="PASS" starttime="20220802 23:15:07.959" endtime="20220802 23:15:07.977"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:28.381" endtime="20220801 14:29:33.637"/>
+<status status="PASS" starttime="20220802 23:15:01.008" endtime="20220802 23:15:07.977"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="d2f5b18a-c834-4bda-9e25-a7f8378e508f")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="8341cd0d-107c-439f-9dac-413b10cbd444")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:33.638" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:29:33.637" endtime="20220801 14:29:33.819"/>
+<msg timestamp="20220802 23:15:07.978" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:07.977" endtime="20220802 23:15:08.109"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:34.824" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:33.819" endtime="20220801 14:29:34.824"/>
+<msg timestamp="20220802 23:15:09.119" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:08.109" endtime="20220802 23:15:09.119"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:34.825" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="d2f5b18a-c834-4bda-9e25-a7f8378e508f")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:29:34.824" endtime="20220801 14:29:34.878"/>
+<msg timestamp="20220802 23:15:09.119" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="8341cd0d-107c-439f-9dac-413b10cbd444")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:09.119" endtime="20220802 23:15:09.163"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:35.880" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:34.879" endtime="20220801 14:29:35.880"/>
+<msg timestamp="20220802 23:15:10.172" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:09.163" endtime="20220802 23:15:10.172"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:35.881" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:29:35.880" endtime="20220801 14:29:36.216"/>
+<msg timestamp="20220802 23:15:10.173" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:10.172" endtime="20220802 23:15:10.492"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:36.216" endtime="20220801 14:29:36.243"/>
+<status status="PASS" starttime="20220802 23:15:10.492" endtime="20220802 23:15:10.517"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:29:36.244" endtime="20220801 14:29:39.035"/>
+<status status="PASS" starttime="20220802 23:15:10.517" endtime="20220802 23:15:12.867"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:29:39.036" endtime="20220801 14:29:39.246"/>
+<status status="PASS" starttime="20220802 23:15:12.868" endtime="20220802 23:15:12.993"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:39.246" endtime="20220801 14:29:39.258"/>
+<status status="PASS" starttime="20220802 23:15:12.993" endtime="20220802 23:15:13.004"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:33.637" endtime="20220801 14:29:39.259"/>
+<status status="PASS" starttime="20220802 23:15:07.977" endtime="20220802 23:15:13.004"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="6fcd1438-bc99-407d-b0c4-733039af08b7")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="77803644-8842-45f1-9659-4bdf4fc0ebb6")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:39.259" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:29:39.259" endtime="20220801 14:29:39.541"/>
+<msg timestamp="20220802 23:15:13.005" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:13.004" endtime="20220802 23:15:13.135"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:40.551" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:39.541" endtime="20220801 14:29:40.552"/>
+<msg timestamp="20220802 23:15:14.143" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:13.136" endtime="20220802 23:15:14.143"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:40.553" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="6fcd1438-bc99-407d-b0c4-733039af08b7")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:29:40.552" endtime="20220801 14:29:40.599"/>
+<msg timestamp="20220802 23:15:14.144" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="77803644-8842-45f1-9659-4bdf4fc0ebb6")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:14.143" endtime="20220802 23:15:14.186"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:41.607" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:40.600" endtime="20220801 14:29:41.607"/>
+<msg timestamp="20220802 23:15:15.193" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:14.186" endtime="20220802 23:15:15.193"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:41.609" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:29:41.608" endtime="20220801 14:29:41.947"/>
+<msg timestamp="20220802 23:15:15.195" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:15.194" endtime="20220802 23:15:15.558"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:41.947" endtime="20220801 14:29:41.970"/>
+<status status="PASS" starttime="20220802 23:15:15.559" endtime="20220802 23:15:15.583"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:29:41.971" endtime="20220801 14:29:43.453"/>
+<status status="PASS" starttime="20220802 23:15:15.583" endtime="20220802 23:15:17.781"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:29:43.453" endtime="20220801 14:29:43.477"/>
+<status status="PASS" starttime="20220802 23:15:17.782" endtime="20220802 23:15:17.909"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:43.477" endtime="20220801 14:29:43.491"/>
+<status status="PASS" starttime="20220802 23:15:17.909" endtime="20220802 23:15:17.924"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:39.259" endtime="20220801 14:29:43.491"/>
+<status status="PASS" starttime="20220802 23:15:13.004" endtime="20220802 23:15:17.925"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="393475c3-19ee-4608-bbcc-43c6d48b411b")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="ef69dab7-d924-4bbc-a2a5-6f4aec2bc27c")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:43.492" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:29:43.492" endtime="20220801 14:29:43.755"/>
+<msg timestamp="20220802 23:15:17.925" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:17.925" endtime="20220802 23:15:18.017"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:44.770" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:43.755" endtime="20220801 14:29:44.770"/>
+<msg timestamp="20220802 23:15:19.030" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:18.018" endtime="20220802 23:15:19.031"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:44.770" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="393475c3-19ee-4608-bbcc-43c6d48b411b")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:29:44.770" endtime="20220801 14:29:44.807"/>
+<msg timestamp="20220802 23:15:19.033" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="ef69dab7-d924-4bbc-a2a5-6f4aec2bc27c")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:19.031" endtime="20220802 23:15:19.095"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:45.820" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:44.807" endtime="20220801 14:29:45.820"/>
+<msg timestamp="20220802 23:15:20.107" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:19.096" endtime="20220802 23:15:20.107"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:45.821" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:29:45.820" endtime="20220801 14:29:46.158"/>
+<msg timestamp="20220802 23:15:20.108" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:20.107" endtime="20220802 23:15:20.455"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:46.158" endtime="20220801 14:29:46.182"/>
+<status status="PASS" starttime="20220802 23:15:20.455" endtime="20220802 23:15:20.481"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:29:46.182" endtime="20220801 14:29:47.976"/>
+<status status="PASS" starttime="20220802 23:15:20.481" endtime="20220802 23:15:23.282"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:29:47.976" endtime="20220801 14:29:48.106"/>
+<status status="PASS" starttime="20220802 23:15:23.282" endtime="20220802 23:15:23.430"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:48.107" endtime="20220801 14:29:48.115"/>
+<status status="PASS" starttime="20220802 23:15:23.430" endtime="20220802 23:15:23.447"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:43.491" endtime="20220801 14:29:48.116"/>
+<status status="PASS" starttime="20220802 23:15:17.925" endtime="20220802 23:15:23.447"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="e8cceb62-52ed-486d-bdf0-e64e8cc921c8")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="35d76aec-31d1-404a-aca9-1659676f1013")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:48.116" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:29:48.116" endtime="20220801 14:29:48.321"/>
+<msg timestamp="20220802 23:15:23.448" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:23.447" endtime="20220802 23:15:23.622"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:49.324" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:48.321" endtime="20220801 14:29:49.325"/>
+<msg timestamp="20220802 23:15:24.637" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:23.623" endtime="20220802 23:15:24.637"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:49.326" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="e8cceb62-52ed-486d-bdf0-e64e8cc921c8")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:29:49.325" endtime="20220801 14:29:49.363"/>
+<msg timestamp="20220802 23:15:24.639" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="35d76aec-31d1-404a-aca9-1659676f1013")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:24.638" endtime="20220802 23:15:24.690"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:50.372" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:49.363" endtime="20220801 14:29:50.372"/>
+<msg timestamp="20220802 23:15:25.695" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:24.691" endtime="20220802 23:15:25.695"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:50.373" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:29:50.373" endtime="20220801 14:29:50.721"/>
+<msg timestamp="20220802 23:15:25.696" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:25.695" endtime="20220802 23:15:26.037"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:50.721" endtime="20220801 14:29:50.745"/>
+<status status="PASS" starttime="20220802 23:15:26.037" endtime="20220802 23:15:26.064"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:29:50.745" endtime="20220801 14:29:52.375"/>
+<status status="PASS" starttime="20220802 23:15:26.064" endtime="20220802 23:15:28.316"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:29:52.375" endtime="20220801 14:29:52.406"/>
+<status status="PASS" starttime="20220802 23:15:28.316" endtime="20220802 23:15:28.447"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:52.406" endtime="20220801 14:29:52.423"/>
+<status status="PASS" starttime="20220802 23:15:28.447" endtime="20220802 23:15:28.466"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:48.116" endtime="20220801 14:29:52.423"/>
+<status status="PASS" starttime="20220802 23:15:23.447" endtime="20220802 23:15:28.466"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="3228f606-29b9-4fd5-b0ab-22e800f9b3e9")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="4d2b4342-5dcc-444b-b8ab-2e52ea119b19")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:52.424" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:29:52.424" endtime="20220801 14:29:52.641"/>
+<msg timestamp="20220802 23:15:28.467" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:28.466" endtime="20220802 23:15:28.566"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:53.647" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:52.641" endtime="20220801 14:29:53.647"/>
+<msg timestamp="20220802 23:15:29.579" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:28.566" endtime="20220802 23:15:29.579"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:53.647" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="3228f606-29b9-4fd5-b0ab-22e800f9b3e9")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:29:53.647" endtime="20220801 14:29:53.684"/>
+<msg timestamp="20220802 23:15:29.580" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="4d2b4342-5dcc-444b-b8ab-2e52ea119b19")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:29.580" endtime="20220802 23:15:29.626"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:54.689" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:53.684" endtime="20220801 14:29:54.689"/>
+<msg timestamp="20220802 23:15:30.636" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:29.626" endtime="20220802 23:15:30.636"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:54.691" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:29:54.690" endtime="20220801 14:29:55.039"/>
+<msg timestamp="20220802 23:15:30.637" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:30.636" endtime="20220802 23:15:30.954"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:55.039" endtime="20220801 14:29:55.062"/>
+<status status="PASS" starttime="20220802 23:15:30.954" endtime="20220802 23:15:30.981"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:29:55.063" endtime="20220801 14:29:56.920"/>
+<status status="PASS" starttime="20220802 23:15:30.981" endtime="20220802 23:15:33.370"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:29:56.920" endtime="20220801 14:29:56.943"/>
+<status status="PASS" starttime="20220802 23:15:33.370" endtime="20220802 23:15:33.446"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:56.944" endtime="20220801 14:29:56.957"/>
+<status status="PASS" starttime="20220802 23:15:33.446" endtime="20220802 23:15:33.457"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:52.424" endtime="20220801 14:29:56.957"/>
+<status status="PASS" starttime="20220802 23:15:28.466" endtime="20220802 23:15:33.457"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0d2860ad-64a2-48e8-971d-32b8daf06f3b")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="79387554-3a49-449f-812a-2c1b2259f393")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:56.958" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:29:56.958" endtime="20220801 14:29:57.168"/>
+<msg timestamp="20220802 23:15:33.458" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:33.458" endtime="20220802 23:15:33.543"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:58.182" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:57.169" endtime="20220801 14:29:58.182"/>
+<msg timestamp="20220802 23:15:34.551" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:33.544" endtime="20220802 23:15:34.551"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:58.183" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0d2860ad-64a2-48e8-971d-32b8daf06f3b")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:29:58.182" endtime="20220801 14:29:58.244"/>
+<msg timestamp="20220802 23:15:34.552" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="79387554-3a49-449f-812a-2c1b2259f393")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:34.551" endtime="20220802 23:15:34.586"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:29:59.254" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:29:58.244" endtime="20220801 14:29:59.254"/>
+<msg timestamp="20220802 23:15:35.601" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:34.587" endtime="20220802 23:15:35.601"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:29:59.255" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:29:59.254" endtime="20220801 14:29:59.589"/>
+<msg timestamp="20220802 23:15:35.603" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:35.602" endtime="20220802 23:15:35.949"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:29:59.589" endtime="20220801 14:29:59.614"/>
+<status status="PASS" starttime="20220802 23:15:35.950" endtime="20220802 23:15:35.974"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:29:59.614" endtime="20220801 14:30:01.236"/>
+<status status="PASS" starttime="20220802 23:15:35.975" endtime="20220802 23:15:38.248"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:01.236" endtime="20220801 14:30:01.258"/>
+<status status="PASS" starttime="20220802 23:15:38.248" endtime="20220802 23:15:38.378"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:01.258" endtime="20220801 14:30:01.272"/>
+<status status="PASS" starttime="20220802 23:15:38.378" endtime="20220802 23:15:38.392"/>
 </kw>
-<status status="PASS" starttime="20220801 14:29:56.957" endtime="20220801 14:30:01.272"/>
+<status status="PASS" starttime="20220802 23:15:33.457" endtime="20220802 23:15:38.392"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="16b24295-a8eb-4d7f-ab51-ef5b942ef164")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="794af6e2-6aae-4e86-9ac0-b4d7d55d396b")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:01.273" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:01.272" endtime="20220801 14:30:01.469"/>
+<msg timestamp="20220802 23:15:38.393" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:38.392" endtime="20220802 23:15:38.512"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:02.471" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:01.469" endtime="20220801 14:30:02.471"/>
+<msg timestamp="20220802 23:15:39.512" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:38.512" endtime="20220802 23:15:39.513"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:02.473" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="16b24295-a8eb-4d7f-ab51-ef5b942ef164")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:02.472" endtime="20220801 14:30:02.531"/>
+<msg timestamp="20220802 23:15:39.515" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="794af6e2-6aae-4e86-9ac0-b4d7d55d396b")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:39.513" endtime="20220802 23:15:39.583"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:03.537" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:02.532" endtime="20220801 14:30:03.537"/>
+<msg timestamp="20220802 23:15:40.589" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:39.583" endtime="20220802 23:15:40.589"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:03.537" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:03.537" endtime="20220801 14:30:03.873"/>
+<msg timestamp="20220802 23:15:40.591" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:40.590" endtime="20220802 23:15:40.952"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:03.873" endtime="20220801 14:30:03.898"/>
+<status status="PASS" starttime="20220802 23:15:40.952" endtime="20220802 23:15:40.977"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:03.898" endtime="20220801 14:30:05.900"/>
+<status status="PASS" starttime="20220802 23:15:40.978" endtime="20220802 23:15:43.572"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:05.901" endtime="20220801 14:30:05.927"/>
+<status status="PASS" starttime="20220802 23:15:43.573" endtime="20220802 23:15:43.648"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:05.928" endtime="20220801 14:30:05.945"/>
+<status status="PASS" starttime="20220802 23:15:43.648" endtime="20220802 23:15:43.665"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:01.272" endtime="20220801 14:30:05.945"/>
+<status status="PASS" starttime="20220802 23:15:38.392" endtime="20220802 23:15:43.665"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0ac85913-bc27-4647-bdfb-937bc7522660")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="f57eac9a-749f-46b4-b2f0-9760c2a8ff9e")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:05.946" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:05.946" endtime="20220801 14:30:06.261"/>
+<msg timestamp="20220802 23:15:43.666" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:43.666" endtime="20220802 23:15:43.765"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:07.263" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:06.261" endtime="20220801 14:30:07.264"/>
+<msg timestamp="20220802 23:15:44.768" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:43.765" endtime="20220802 23:15:44.768"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:07.265" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0ac85913-bc27-4647-bdfb-937bc7522660")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:07.264" endtime="20220801 14:30:07.337"/>
+<msg timestamp="20220802 23:15:44.770" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="f57eac9a-749f-46b4-b2f0-9760c2a8ff9e")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:44.769" endtime="20220802 23:15:44.842"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:08.348" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:07.337" endtime="20220801 14:30:08.349"/>
+<msg timestamp="20220802 23:15:45.847" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:44.842" endtime="20220802 23:15:45.847"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:08.350" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:08.349" endtime="20220801 14:30:08.714"/>
+<msg timestamp="20220802 23:15:45.849" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:45.848" endtime="20220802 23:15:46.202"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:08.715" endtime="20220801 14:30:08.742"/>
+<status status="PASS" starttime="20220802 23:15:46.203" endtime="20220802 23:15:46.225"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:08.742" endtime="20220801 14:30:10.280"/>
+<status status="PASS" starttime="20220802 23:15:46.225" endtime="20220802 23:15:48.557"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:10.281" endtime="20220801 14:30:10.307"/>
+<status status="PASS" starttime="20220802 23:15:48.557" endtime="20220802 23:15:48.683"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:10.308" endtime="20220801 14:30:10.321"/>
+<status status="PASS" starttime="20220802 23:15:48.683" endtime="20220802 23:15:48.694"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:05.945" endtime="20220801 14:30:10.321"/>
+<status status="PASS" starttime="20220802 23:15:43.665" endtime="20220802 23:15:48.694"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="c3b217fb-3184-4554-92e1-02df2f3b1042")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="94e798dc-684e-456f-bbfc-5d61ad73ca85")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:10.322" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:10.321" endtime="20220801 14:30:10.489"/>
+<msg timestamp="20220802 23:15:48.695" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:48.694" endtime="20220802 23:15:48.805"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:11.495" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:10.490" endtime="20220801 14:30:11.495"/>
+<msg timestamp="20220802 23:15:49.818" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:48.805" endtime="20220802 23:15:49.818"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:11.497" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="c3b217fb-3184-4554-92e1-02df2f3b1042")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:11.496" endtime="20220801 14:30:11.552"/>
+<msg timestamp="20220802 23:15:49.820" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="94e798dc-684e-456f-bbfc-5d61ad73ca85")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:49.819" endtime="20220802 23:15:49.856"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:12.563" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:11.553" endtime="20220801 14:30:12.563"/>
+<msg timestamp="20220802 23:15:50.866" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:49.857" endtime="20220802 23:15:50.866"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:12.565" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:12.564" endtime="20220801 14:30:12.913"/>
+<msg timestamp="20220802 23:15:50.868" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:50.867" endtime="20220802 23:15:51.206"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:12.913" endtime="20220801 14:30:12.938"/>
+<status status="PASS" starttime="20220802 23:15:51.206" endtime="20220802 23:15:51.233"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:12.938" endtime="20220801 14:30:15.471"/>
+<status status="PASS" starttime="20220802 23:15:51.233" endtime="20220802 23:15:53.649"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:15.471" endtime="20220801 14:30:15.507"/>
+<status status="PASS" starttime="20220802 23:15:53.650" endtime="20220802 23:15:53.784"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:15.508" endtime="20220801 14:30:15.524"/>
+<status status="PASS" starttime="20220802 23:15:53.784" endtime="20220802 23:15:53.798"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:10.321" endtime="20220801 14:30:15.524"/>
+<status status="PASS" starttime="20220802 23:15:48.694" endtime="20220802 23:15:53.798"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="067ae343-30b6-4a84-8ffb-f64c022abb7f")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="6d550aaf-7875-4347-943f-3659f9767a41")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:15.525" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:15.524" endtime="20220801 14:30:15.734"/>
+<msg timestamp="20220802 23:15:53.799" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:53.799" endtime="20220802 23:15:53.909"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:16.747" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:15.734" endtime="20220801 14:30:16.747"/>
+<msg timestamp="20220802 23:15:54.917" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:53.909" endtime="20220802 23:15:54.917"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:16.749" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="067ae343-30b6-4a84-8ffb-f64c022abb7f")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:16.748" endtime="20220801 14:30:16.786"/>
+<msg timestamp="20220802 23:15:54.920" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="6d550aaf-7875-4347-943f-3659f9767a41")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:15:54.918" endtime="20220802 23:15:54.978"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:17.802" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:16.787" endtime="20220801 14:30:17.802"/>
+<msg timestamp="20220802 23:15:55.981" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:54.979" endtime="20220802 23:15:55.982"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:17.804" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:17.803" endtime="20220801 14:30:18.163"/>
+<msg timestamp="20220802 23:15:55.983" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:15:55.982" endtime="20220802 23:15:56.335"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:18.163" endtime="20220801 14:30:18.188"/>
+<status status="PASS" starttime="20220802 23:15:56.336" endtime="20220802 23:15:56.362"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:18.189" endtime="20220801 14:30:19.767"/>
+<status status="PASS" starttime="20220802 23:15:56.363" endtime="20220802 23:15:58.969"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:19.768" endtime="20220801 14:30:19.796"/>
+<status status="PASS" starttime="20220802 23:15:58.970" endtime="20220802 23:15:59.101"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:19.796" endtime="20220801 14:30:19.812"/>
+<status status="PASS" starttime="20220802 23:15:59.101" endtime="20220802 23:15:59.113"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:15.524" endtime="20220801 14:30:19.812"/>
+<status status="PASS" starttime="20220802 23:15:53.798" endtime="20220802 23:15:59.113"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="7522a582-9afa-4acc-9770-119f36519d64")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="ee850c2b-04cc-4c2e-a1fd-96ae36b86358")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:19.813" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:19.812" endtime="20220801 14:30:20.037"/>
+<msg timestamp="20220802 23:15:59.115" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:15:59.114" endtime="20220802 23:15:59.224"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:21.041" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:20.037" endtime="20220801 14:30:21.041"/>
+<msg timestamp="20220802 23:16:00.232" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:15:59.225" endtime="20220802 23:16:00.232"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:21.042" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="7522a582-9afa-4acc-9770-119f36519d64")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:21.041" endtime="20220801 14:30:21.077"/>
+<msg timestamp="20220802 23:16:00.234" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="ee850c2b-04cc-4c2e-a1fd-96ae36b86358")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:00.233" endtime="20220802 23:16:00.288"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:22.081" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:21.077" endtime="20220801 14:30:22.081"/>
+<msg timestamp="20220802 23:16:01.292" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:00.289" endtime="20220802 23:16:01.292"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:22.083" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:22.082" endtime="20220801 14:30:22.414"/>
+<msg timestamp="20220802 23:16:01.294" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:01.293" endtime="20220802 23:16:01.625"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:22.414" endtime="20220801 14:30:22.439"/>
+<status status="PASS" starttime="20220802 23:16:01.625" endtime="20220802 23:16:01.649"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:22.439" endtime="20220801 14:30:24.232"/>
+<status status="PASS" starttime="20220802 23:16:01.649" endtime="20220802 23:16:04.127"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:24.232" endtime="20220801 14:30:24.260"/>
+<status status="PASS" starttime="20220802 23:16:04.127" endtime="20220802 23:16:04.199"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:24.261" endtime="20220801 14:30:24.276"/>
+<status status="PASS" starttime="20220802 23:16:04.199" endtime="20220802 23:16:04.215"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:19.812" endtime="20220801 14:30:24.276"/>
+<status status="PASS" starttime="20220802 23:15:59.114" endtime="20220802 23:16:04.215"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="9698be7b-6694-4284-b684-9430cbf8be45")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="46ff27a5-a226-4829-affe-d6639ce6f2a4")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:24.277" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:24.276" endtime="20220801 14:30:24.477"/>
+<msg timestamp="20220802 23:16:04.216" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:04.215" endtime="20220802 23:16:04.318"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:25.489" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:24.478" endtime="20220801 14:30:25.490"/>
+<msg timestamp="20220802 23:16:05.319" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:04.318" endtime="20220802 23:16:05.319"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:25.491" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="9698be7b-6694-4284-b684-9430cbf8be45")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:25.490" endtime="20220801 14:30:25.548"/>
+<msg timestamp="20220802 23:16:05.321" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="46ff27a5-a226-4829-affe-d6639ce6f2a4")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:05.320" endtime="20220802 23:16:05.380"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:26.551" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:25.548" endtime="20220801 14:30:26.551"/>
+<msg timestamp="20220802 23:16:06.382" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:05.381" endtime="20220802 23:16:06.382"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:26.553" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:26.552" endtime="20220801 14:30:26.901"/>
+<msg timestamp="20220802 23:16:06.383" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:06.382" endtime="20220802 23:16:06.712"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:26.902" endtime="20220801 14:30:26.925"/>
+<status status="PASS" starttime="20220802 23:16:06.712" endtime="20220802 23:16:06.740"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:26.925" endtime="20220801 14:30:28.567"/>
+<status status="PASS" starttime="20220802 23:16:06.740" endtime="20220802 23:16:09.083"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:28.567" endtime="20220801 14:30:28.594"/>
+<status status="PASS" starttime="20220802 23:16:09.083" endtime="20220802 23:16:09.212"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:28.595" endtime="20220801 14:30:28.608"/>
+<status status="PASS" starttime="20220802 23:16:09.213" endtime="20220802 23:16:09.230"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:24.276" endtime="20220801 14:30:28.608"/>
+<status status="PASS" starttime="20220802 23:16:04.215" endtime="20220802 23:16:09.231"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="b337933f-9a2a-4c79-9a42-d61ba16181d5")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="61de8827-52c2-4a62-b92a-ff347e9e04ca")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:28.609" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:28.608" endtime="20220801 14:30:28.811"/>
+<msg timestamp="20220802 23:16:09.232" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:09.231" endtime="20220802 23:16:09.325"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:29.816" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:28.812" endtime="20220801 14:30:29.817"/>
+<msg timestamp="20220802 23:16:10.329" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:09.326" endtime="20220802 23:16:10.329"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:29.818" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="b337933f-9a2a-4c79-9a42-d61ba16181d5")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:29.817" endtime="20220801 14:30:29.876"/>
+<msg timestamp="20220802 23:16:10.329" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="61de8827-52c2-4a62-b92a-ff347e9e04ca")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:10.329" endtime="20220802 23:16:10.364"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:30.889" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:29.876" endtime="20220801 14:30:30.889"/>
+<msg timestamp="20220802 23:16:11.378" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:10.364" endtime="20220802 23:16:11.378"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:30.891" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:30.890" endtime="20220801 14:30:31.229"/>
+<msg timestamp="20220802 23:16:11.379" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:11.379" endtime="20220802 23:16:11.714"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:31.229" endtime="20220801 14:30:31.252"/>
+<status status="PASS" starttime="20220802 23:16:11.715" endtime="20220802 23:16:11.739"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:31.252" endtime="20220801 14:30:32.905"/>
+<status status="PASS" starttime="20220802 23:16:11.739" endtime="20220802 23:16:14.194"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:32.905" endtime="20220801 14:30:33.026"/>
+<status status="PASS" starttime="20220802 23:16:14.195" endtime="20220802 23:16:14.273"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:33.026" endtime="20220801 14:30:33.036"/>
+<status status="PASS" starttime="20220802 23:16:14.273" endtime="20220802 23:16:14.291"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:28.608" endtime="20220801 14:30:33.036"/>
+<status status="PASS" starttime="20220802 23:16:09.231" endtime="20220802 23:16:14.291"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0c039141-be14-4bca-abbb-56e37287a8ae")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="b2f178ed-c849-4f51-a87b-aec3ace3aaaf")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:33.037" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:33.037" endtime="20220801 14:30:33.241"/>
+<msg timestamp="20220802 23:16:14.292" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:14.292" endtime="20220802 23:16:14.415"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:34.250" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:33.241" endtime="20220801 14:30:34.250"/>
+<msg timestamp="20220802 23:16:15.415" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:14.415" endtime="20220802 23:16:15.415"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:34.252" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0c039141-be14-4bca-abbb-56e37287a8ae")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:34.251" endtime="20220801 14:30:34.317"/>
+<msg timestamp="20220802 23:16:15.417" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="b2f178ed-c849-4f51-a87b-aec3ace3aaaf")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:15.416" endtime="20220802 23:16:15.486"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:35.320" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:34.317" endtime="20220801 14:30:35.320"/>
+<msg timestamp="20220802 23:16:16.494" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:15.486" endtime="20220802 23:16:16.494"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:35.321" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:35.321" endtime="20220801 14:30:35.656"/>
+<msg timestamp="20220802 23:16:16.495" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:16.494" endtime="20220802 23:16:16.846"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:35.656" endtime="20220801 14:30:35.681"/>
+<status status="PASS" starttime="20220802 23:16:16.846" endtime="20220802 23:16:16.870"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:35.681" endtime="20220801 14:30:37.349"/>
+<status status="PASS" starttime="20220802 23:16:16.870" endtime="20220802 23:16:19.068"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:37.349" endtime="20220801 14:30:37.416"/>
+<status status="PASS" starttime="20220802 23:16:19.068" endtime="20220802 23:16:19.191"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:37.416" endtime="20220801 14:30:37.424"/>
+<status status="PASS" starttime="20220802 23:16:19.191" endtime="20220802 23:16:19.207"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:33.037" endtime="20220801 14:30:37.424"/>
+<status status="PASS" starttime="20220802 23:16:14.291" endtime="20220802 23:16:19.207"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="ffa2d257-1371-41cf-bf1a-4330b11e7780")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="188ff301-9509-4654-befd-b5c294a2d096")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:37.425" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:37.425" endtime="20220801 14:30:37.603"/>
+<msg timestamp="20220802 23:16:19.208" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:19.207" endtime="20220802 23:16:19.307"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:38.618" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:37.604" endtime="20220801 14:30:38.618"/>
+<msg timestamp="20220802 23:16:20.310" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:19.308" endtime="20220802 23:16:20.310"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:38.620" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="ffa2d257-1371-41cf-bf1a-4330b11e7780")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:38.619" endtime="20220801 14:30:38.682"/>
+<msg timestamp="20220802 23:16:20.312" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="188ff301-9509-4654-befd-b5c294a2d096")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:20.311" endtime="20220802 23:16:20.372"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:39.687" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:38.682" endtime="20220801 14:30:39.687"/>
+<msg timestamp="20220802 23:16:21.388" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:20.373" endtime="20220802 23:16:21.388"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:39.688" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:39.687" endtime="20220801 14:30:40.038"/>
+<msg timestamp="20220802 23:16:21.390" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:21.389" endtime="20220802 23:16:21.723"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:40.038" endtime="20220801 14:30:40.062"/>
+<status status="PASS" starttime="20220802 23:16:21.723" endtime="20220802 23:16:21.746"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:40.062" endtime="20220801 14:30:41.846"/>
+<status status="PASS" starttime="20220802 23:16:21.747" endtime="20220802 23:16:24.437"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:41.847" endtime="20220801 14:30:41.875"/>
+<status status="PASS" starttime="20220802 23:16:24.437" endtime="20220802 23:16:24.563"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:41.875" endtime="20220801 14:30:41.889"/>
+<status status="PASS" starttime="20220802 23:16:24.563" endtime="20220802 23:16:24.580"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:37.424" endtime="20220801 14:30:41.889"/>
+<status status="PASS" starttime="20220802 23:16:19.207" endtime="20220802 23:16:24.580"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="bb594c89-8b83-46f1-9d71-206218c6fa94")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="23de2944-c580-4022-97a9-1278941a5258")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:41.890" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:41.889" endtime="20220801 14:30:42.096"/>
+<msg timestamp="20220802 23:16:24.581" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:24.580" endtime="20220802 23:16:24.676"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:43.099" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:42.096" endtime="20220801 14:30:43.099"/>
+<msg timestamp="20220802 23:16:25.678" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:24.676" endtime="20220802 23:16:25.678"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:43.101" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="bb594c89-8b83-46f1-9d71-206218c6fa94")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:43.100" endtime="20220801 14:30:43.136"/>
+<msg timestamp="20220802 23:16:25.679" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="23de2944-c580-4022-97a9-1278941a5258")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:25.678" endtime="20220802 23:16:25.727"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:44.151" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:43.137" endtime="20220801 14:30:44.151"/>
+<msg timestamp="20220802 23:16:26.739" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:25.728" endtime="20220802 23:16:26.739"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:44.152" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:44.151" endtime="20220801 14:30:44.499"/>
+<msg timestamp="20220802 23:16:26.741" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:26.740" endtime="20220802 23:16:27.090"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:44.499" endtime="20220801 14:30:44.522"/>
+<status status="PASS" starttime="20220802 23:16:27.090" endtime="20220802 23:16:27.116"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:44.522" endtime="20220801 14:30:46.267"/>
+<status status="PASS" starttime="20220802 23:16:27.117" endtime="20220802 23:16:29.358"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:46.267" endtime="20220801 14:30:46.293"/>
+<status status="PASS" starttime="20220802 23:16:29.358" endtime="20220802 23:16:29.432"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:46.294" endtime="20220801 14:30:46.311"/>
+<status status="PASS" starttime="20220802 23:16:29.432" endtime="20220802 23:16:29.442"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:41.889" endtime="20220801 14:30:46.312"/>
+<status status="PASS" starttime="20220802 23:16:24.580" endtime="20220802 23:16:29.442"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="bc9bedff-a2e1-4ea9-97dc-2ea565bae339")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="c3cfc67b-7c4e-4d5d-bfbe-a932d25e1537")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:46.313" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:46.313" endtime="20220801 14:30:46.512"/>
+<msg timestamp="20220802 23:16:29.443" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:29.442" endtime="20220802 23:16:29.514"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:47.524" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:46.512" endtime="20220801 14:30:47.524"/>
+<msg timestamp="20220802 23:16:30.517" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:29.515" endtime="20220802 23:16:30.517"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:47.524" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="bc9bedff-a2e1-4ea9-97dc-2ea565bae339")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:47.524" endtime="20220801 14:30:47.638"/>
+<msg timestamp="20220802 23:16:30.519" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="c3cfc67b-7c4e-4d5d-bfbe-a932d25e1537")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:30.517" endtime="20220802 23:16:30.575"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:48.648" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:47.638" endtime="20220801 14:30:48.648"/>
+<msg timestamp="20220802 23:16:31.579" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:30.575" endtime="20220802 23:16:31.579"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:48.649" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:48.649" endtime="20220801 14:30:49.010"/>
+<msg timestamp="20220802 23:16:31.581" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:31.580" endtime="20220802 23:16:31.937"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:49.010" endtime="20220801 14:30:49.034"/>
+<status status="PASS" starttime="20220802 23:16:31.937" endtime="20220802 23:16:31.963"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:49.035" endtime="20220801 14:30:50.607"/>
+<status status="PASS" starttime="20220802 23:16:31.963" endtime="20220802 23:16:34.317"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:50.607" endtime="20220801 14:30:50.639"/>
+<status status="PASS" starttime="20220802 23:16:34.317" endtime="20220802 23:16:34.401"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:50.639" endtime="20220801 14:30:50.654"/>
+<status status="PASS" starttime="20220802 23:16:34.401" endtime="20220802 23:16:34.418"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:46.312" endtime="20220801 14:30:50.654"/>
+<status status="PASS" starttime="20220802 23:16:29.442" endtime="20220802 23:16:34.418"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="5932f4cb-d1b1-484e-b7ed-283d34fb2138")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="6fbd7af3-1b39-4195-b09a-719db065cfca")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:50.656" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:50.655" endtime="20220801 14:30:50.855"/>
+<msg timestamp="20220802 23:16:34.419" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:34.418" endtime="20220802 23:16:34.555"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:51.859" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:50.856" endtime="20220801 14:30:51.859"/>
+<msg timestamp="20220802 23:16:35.559" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:34.555" endtime="20220802 23:16:35.559"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:51.860" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="5932f4cb-d1b1-484e-b7ed-283d34fb2138")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:51.859" endtime="20220801 14:30:51.919"/>
+<msg timestamp="20220802 23:16:35.561" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="6fbd7af3-1b39-4195-b09a-719db065cfca")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:35.559" endtime="20220802 23:16:35.625"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:52.930" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:51.919" endtime="20220801 14:30:52.931"/>
+<msg timestamp="20220802 23:16:36.640" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:35.626" endtime="20220802 23:16:36.640"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:52.933" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:52.931" endtime="20220801 14:30:53.279"/>
+<msg timestamp="20220802 23:16:36.642" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:36.641" endtime="20220802 23:16:36.971"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:53.279" endtime="20220801 14:30:53.304"/>
+<status status="PASS" starttime="20220802 23:16:36.971" endtime="20220802 23:16:36.996"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:53.304" endtime="20220801 14:30:54.771"/>
+<status status="PASS" starttime="20220802 23:16:36.996" endtime="20220802 23:16:39.280"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:54.771" endtime="20220801 14:30:54.838"/>
+<status status="PASS" starttime="20220802 23:16:39.280" endtime="20220802 23:16:39.364"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:54.838" endtime="20220801 14:30:54.848"/>
+<status status="PASS" starttime="20220802 23:16:39.364" endtime="20220802 23:16:39.382"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:50.654" endtime="20220801 14:30:54.848"/>
+<status status="PASS" starttime="20220802 23:16:34.418" endtime="20220802 23:16:39.382"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="44ad4fd8-000d-4911-985e-52a098ce753d")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="2666ebc8-3a8f-47c0-a286-b61e1c29cab1")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:54.849" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:54.848" endtime="20220801 14:30:55.046"/>
+<msg timestamp="20220802 23:16:39.383" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:39.383" endtime="20220802 23:16:39.492"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:56.048" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:55.046" endtime="20220801 14:30:56.049"/>
+<msg timestamp="20220802 23:16:40.507" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:39.492" endtime="20220802 23:16:40.507"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:56.051" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="44ad4fd8-000d-4911-985e-52a098ce753d")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:30:56.049" endtime="20220801 14:30:56.087"/>
+<msg timestamp="20220802 23:16:40.507" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="2666ebc8-3a8f-47c0-a286-b61e1c29cab1")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:40.507" endtime="20220802 23:16:40.554"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:30:57.094" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:56.087" endtime="20220801 14:30:57.094"/>
+<msg timestamp="20220802 23:16:41.557" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:40.554" endtime="20220802 23:16:41.557"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:57.095" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:30:57.094" endtime="20220801 14:30:57.430"/>
+<msg timestamp="20220802 23:16:41.559" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:41.558" endtime="20220802 23:16:41.924"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:57.431" endtime="20220801 14:30:57.455"/>
+<status status="PASS" starttime="20220802 23:16:41.924" endtime="20220802 23:16:41.949"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:30:57.455" endtime="20220801 14:30:59.112"/>
+<status status="PASS" starttime="20220802 23:16:41.949" endtime="20220802 23:16:44.267"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:30:59.113" endtime="20220801 14:30:59.235"/>
+<status status="PASS" starttime="20220802 23:16:44.267" endtime="20220802 23:16:44.350"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:30:59.236" endtime="20220801 14:30:59.243"/>
+<status status="PASS" starttime="20220802 23:16:44.351" endtime="20220802 23:16:44.365"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:54.848" endtime="20220801 14:30:59.243"/>
+<status status="PASS" starttime="20220802 23:16:39.382" endtime="20220802 23:16:44.365"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="8dd9893e-ee8e-4754-a8a9-bca04e2a4250")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="47409c40-12e0-4618-965d-b019fb41da0b")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:30:59.244" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:30:59.244" endtime="20220801 14:30:59.452"/>
+<msg timestamp="20220802 23:16:44.366" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:44.366" endtime="20220802 23:16:44.481"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:00.469" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:30:59.453" endtime="20220801 14:31:00.469"/>
+<msg timestamp="20220802 23:16:45.487" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:44.481" endtime="20220802 23:16:45.488"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:00.471" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="8dd9893e-ee8e-4754-a8a9-bca04e2a4250")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:00.470" endtime="20220801 14:31:00.507"/>
+<msg timestamp="20220802 23:16:45.491" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="47409c40-12e0-4618-965d-b019fb41da0b")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:45.490" endtime="20220802 23:16:45.573"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:01.521" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:00.507" endtime="20220801 14:31:01.521"/>
+<msg timestamp="20220802 23:16:46.585" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:45.573" endtime="20220802 23:16:46.585"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:01.523" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:01.522" endtime="20220801 14:31:01.857"/>
+<msg timestamp="20220802 23:16:46.587" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:46.586" endtime="20220802 23:16:46.940"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:01.857" endtime="20220801 14:31:01.882"/>
+<status status="PASS" starttime="20220802 23:16:46.940" endtime="20220802 23:16:46.967"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:01.882" endtime="20220801 14:31:03.593"/>
+<status status="PASS" starttime="20220802 23:16:46.967" endtime="20220802 23:16:49.387"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:03.593" endtime="20220801 14:31:03.655"/>
+<status status="PASS" starttime="20220802 23:16:49.387" endtime="20220802 23:16:49.477"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:03.655" endtime="20220801 14:31:03.665"/>
+<status status="PASS" starttime="20220802 23:16:49.478" endtime="20220802 23:16:49.492"/>
 </kw>
-<status status="PASS" starttime="20220801 14:30:59.243" endtime="20220801 14:31:03.665"/>
+<status status="PASS" starttime="20220802 23:16:44.366" endtime="20220802 23:16:49.492"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="aedaa268-6cac-4aad-903a-921b46a8ff09")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="2db4c31b-fbff-4e1c-a98f-fb87f13f2185")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:03.666" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:03.666" endtime="20220801 14:31:03.861"/>
+<msg timestamp="20220802 23:16:49.493" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:49.493" endtime="20220802 23:16:49.598"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:04.872" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:03.861" endtime="20220801 14:31:04.872"/>
+<msg timestamp="20220802 23:16:50.613" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:49.599" endtime="20220802 23:16:50.613"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:04.874" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="aedaa268-6cac-4aad-903a-921b46a8ff09")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:04.873" endtime="20220801 14:31:04.938"/>
+<msg timestamp="20220802 23:16:50.615" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="2db4c31b-fbff-4e1c-a98f-fb87f13f2185")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:50.614" endtime="20220802 23:16:50.673"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:05.952" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:04.938" endtime="20220801 14:31:05.952"/>
+<msg timestamp="20220802 23:16:51.676" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:50.674" endtime="20220802 23:16:51.676"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:05.953" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:05.953" endtime="20220801 14:31:06.302"/>
+<msg timestamp="20220802 23:16:51.678" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:51.677" endtime="20220802 23:16:52.010"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:06.302" endtime="20220801 14:31:06.327"/>
+<status status="PASS" starttime="20220802 23:16:52.010" endtime="20220802 23:16:52.034"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:06.328" endtime="20220801 14:31:08.002"/>
+<status status="PASS" starttime="20220802 23:16:52.035" endtime="20220802 23:16:54.199"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:08.003" endtime="20220801 14:31:08.030"/>
+<status status="PASS" starttime="20220802 23:16:54.199" endtime="20220802 23:16:54.329"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:08.031" endtime="20220801 14:31:08.043"/>
+<status status="PASS" starttime="20220802 23:16:54.329" endtime="20220802 23:16:54.341"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:03.665" endtime="20220801 14:31:08.043"/>
+<status status="PASS" starttime="20220802 23:16:49.493" endtime="20220802 23:16:54.341"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="16daf3c5-6b52-418b-8c8d-12aee2e36662")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="e8020f06-b972-4535-a685-264fb2031c28")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:08.045" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:08.044" endtime="20220801 14:31:08.242"/>
+<msg timestamp="20220802 23:16:54.342" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:54.341" endtime="20220802 23:16:54.446"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:09.254" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:08.242" endtime="20220801 14:31:09.254"/>
+<msg timestamp="20220802 23:16:55.450" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:54.446" endtime="20220802 23:16:55.450"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:09.256" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="16daf3c5-6b52-418b-8c8d-12aee2e36662")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:09.255" endtime="20220801 14:31:09.314"/>
+<msg timestamp="20220802 23:16:55.452" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="e8020f06-b972-4535-a685-264fb2031c28")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:16:55.451" endtime="20220802 23:16:55.485"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:10.323" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:09.315" endtime="20220801 14:31:10.323"/>
+<msg timestamp="20220802 23:16:56.499" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:55.485" endtime="20220802 23:16:56.499"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:10.325" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:10.324" endtime="20220801 14:31:10.675"/>
+<msg timestamp="20220802 23:16:56.500" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:16:56.499" endtime="20220802 23:16:56.841"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:10.676" endtime="20220801 14:31:10.700"/>
+<status status="PASS" starttime="20220802 23:16:56.842" endtime="20220802 23:16:56.871"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:10.700" endtime="20220801 14:31:12.472"/>
+<status status="PASS" starttime="20220802 23:16:56.872" endtime="20220802 23:16:59.259"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:12.473" endtime="20220801 14:31:12.541"/>
+<status status="PASS" starttime="20220802 23:16:59.259" endtime="20220802 23:16:59.347"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:12.542" endtime="20220801 14:31:12.551"/>
+<status status="PASS" starttime="20220802 23:16:59.348" endtime="20220802 23:16:59.364"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:08.044" endtime="20220801 14:31:12.551"/>
+<status status="PASS" starttime="20220802 23:16:54.341" endtime="20220802 23:16:59.364"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="179bef7a-6486-43c8-bd5f-8d9781d6995d")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="260ba10d-ea17-4b98-aa6f-906ee4685871")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:12.552" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:12.551" endtime="20220801 14:31:12.718"/>
+<msg timestamp="20220802 23:16:59.366" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:16:59.365" endtime="20220802 23:16:59.473"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:13.729" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:12.719" endtime="20220801 14:31:13.729"/>
+<msg timestamp="20220802 23:17:00.486" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:16:59.473" endtime="20220802 23:17:00.486"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:13.729" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="179bef7a-6486-43c8-bd5f-8d9781d6995d")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:13.729" endtime="20220801 14:31:13.763"/>
+<msg timestamp="20220802 23:17:00.487" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="260ba10d-ea17-4b98-aa6f-906ee4685871")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:00.486" endtime="20220802 23:17:00.512"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:14.766" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:13.763" endtime="20220801 14:31:14.766"/>
+<msg timestamp="20220802 23:17:01.514" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:00.512" endtime="20220802 23:17:01.516"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:14.768" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:14.767" endtime="20220801 14:31:15.101"/>
+<msg timestamp="20220802 23:17:01.518" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:01.517" endtime="20220802 23:17:01.865"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:15.102" endtime="20220801 14:31:15.125"/>
+<status status="PASS" starttime="20220802 23:17:01.865" endtime="20220802 23:17:01.889"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:15.126" endtime="20220801 14:31:16.820"/>
+<status status="PASS" starttime="20220802 23:17:01.890" endtime="20220802 23:17:04.406"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:16.820" endtime="20220801 14:31:16.948"/>
+<status status="PASS" starttime="20220802 23:17:04.406" endtime="20220802 23:17:04.539"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:16.948" endtime="20220801 14:31:16.957"/>
+<status status="PASS" starttime="20220802 23:17:04.539" endtime="20220802 23:17:04.554"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:12.551" endtime="20220801 14:31:16.958"/>
+<status status="PASS" starttime="20220802 23:16:59.365" endtime="20220802 23:17:04.554"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="f484efec-e646-4ed6-b3de-f0c282485a24")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="39d9f846-24d5-40aa-a89b-7ff374315bde")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:16.959" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:16.958" endtime="20220801 14:31:17.170"/>
+<msg timestamp="20220802 23:17:04.554" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:04.554" endtime="20220802 23:17:04.666"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:18.179" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:17.170" endtime="20220801 14:31:18.179"/>
+<msg timestamp="20220802 23:17:05.673" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:04.666" endtime="20220802 23:17:05.673"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:18.179" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="f484efec-e646-4ed6-b3de-f0c282485a24")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:18.179" endtime="20220801 14:31:18.212"/>
+<msg timestamp="20220802 23:17:05.675" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="39d9f846-24d5-40aa-a89b-7ff374315bde")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:05.674" endtime="20220802 23:17:05.729"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:19.226" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:18.212" endtime="20220801 14:31:19.226"/>
+<msg timestamp="20220802 23:17:06.733" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:05.730" endtime="20220802 23:17:06.733"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:19.228" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:19.227" endtime="20220801 14:31:19.562"/>
+<msg timestamp="20220802 23:17:06.734" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:06.733" endtime="20220802 23:17:07.053"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:19.562" endtime="20220801 14:31:19.586"/>
+<status status="PASS" starttime="20220802 23:17:07.053" endtime="20220802 23:17:07.079"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:19.586" endtime="20220801 14:31:21.153"/>
+<status status="PASS" starttime="20220802 23:17:07.079" endtime="20220802 23:17:09.307"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:21.153" endtime="20220801 14:31:21.178"/>
+<status status="PASS" starttime="20220802 23:17:09.307" endtime="20220802 23:17:09.435"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:21.178" endtime="20220801 14:31:21.192"/>
+<status status="PASS" starttime="20220802 23:17:09.435" endtime="20220802 23:17:09.448"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:16.958" endtime="20220801 14:31:21.192"/>
+<status status="PASS" starttime="20220802 23:17:04.554" endtime="20220802 23:17:09.448"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="698e53a9-0b8c-4727-a33e-e0e3775d8c1a")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="7aac6c26-eec1-49b0-8573-e7185683ff03")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:21.193" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:21.193" endtime="20220801 14:31:21.391"/>
+<msg timestamp="20220802 23:17:09.449" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:09.448" endtime="20220802 23:17:09.554"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:22.400" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:21.392" endtime="20220801 14:31:22.401"/>
+<msg timestamp="20220802 23:17:10.557" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:09.555" endtime="20220802 23:17:10.558"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:22.403" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="698e53a9-0b8c-4727-a33e-e0e3775d8c1a")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:22.401" endtime="20220801 14:31:22.439"/>
+<msg timestamp="20220802 23:17:10.560" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="7aac6c26-eec1-49b0-8573-e7185683ff03")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:10.558" endtime="20220802 23:17:10.619"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:23.441" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:22.439" endtime="20220801 14:31:23.441"/>
+<msg timestamp="20220802 23:17:11.624" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:10.619" endtime="20220802 23:17:11.625"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:23.443" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:23.442" endtime="20220801 14:31:23.778"/>
+<msg timestamp="20220802 23:17:11.626" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:11.625" endtime="20220802 23:17:11.973"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:23.778" endtime="20220801 14:31:23.804"/>
+<status status="PASS" starttime="20220802 23:17:11.973" endtime="20220802 23:17:11.997"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:23.804" endtime="20220801 14:31:25.555"/>
+<status status="PASS" starttime="20220802 23:17:11.998" endtime="20220802 23:17:14.376"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:25.555" endtime="20220801 14:31:25.617"/>
+<status status="PASS" starttime="20220802 23:17:14.376" endtime="20220802 23:17:14.459"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:25.617" endtime="20220801 14:31:25.627"/>
+<status status="PASS" starttime="20220802 23:17:14.459" endtime="20220802 23:17:14.474"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:21.192" endtime="20220801 14:31:25.627"/>
+<status status="PASS" starttime="20220802 23:17:09.448" endtime="20220802 23:17:14.474"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0e7c0a97-02be-4b47-abdd-70efe891098f")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="c172e45e-7b34-4324-86d6-d11129174d88")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:25.627" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:25.627" endtime="20220801 14:31:25.817"/>
+<msg timestamp="20220802 23:17:14.476" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:14.475" endtime="20220802 23:17:14.578"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:26.827" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:25.817" endtime="20220801 14:31:26.828"/>
+<msg timestamp="20220802 23:17:15.590" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:14.579" endtime="20220802 23:17:15.591"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:26.830" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="0e7c0a97-02be-4b47-abdd-70efe891098f")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:26.829" endtime="20220801 14:31:26.881"/>
+<msg timestamp="20220802 23:17:15.594" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="c172e45e-7b34-4324-86d6-d11129174d88")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:15.592" endtime="20220802 23:17:15.663"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:27.893" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:26.882" endtime="20220801 14:31:27.893"/>
+<msg timestamp="20220802 23:17:16.666" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:15.663" endtime="20220802 23:17:16.666"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:27.896" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:27.894" endtime="20220801 14:31:28.243"/>
+<msg timestamp="20220802 23:17:16.666" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:16.666" endtime="20220802 23:17:16.981"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:28.243" endtime="20220801 14:31:28.269"/>
+<status status="PASS" starttime="20220802 23:17:16.981" endtime="20220802 23:17:17.006"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:28.269" endtime="20220801 14:31:30.284"/>
+<status status="PASS" starttime="20220802 23:17:17.006" endtime="20220802 23:17:19.750"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:30.284" endtime="20220801 14:31:30.357"/>
+<status status="PASS" starttime="20220802 23:17:19.750" endtime="20220802 23:17:19.882"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:30.357" endtime="20220801 14:31:30.364"/>
+<status status="PASS" starttime="20220802 23:17:19.882" endtime="20220802 23:17:19.897"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:25.627" endtime="20220801 14:31:30.364"/>
+<status status="PASS" starttime="20220802 23:17:14.475" endtime="20220802 23:17:19.897"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="acb4b9aa-07ae-4cb3-abeb-ca05b7215ec1")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="22117afa-da06-41ae-873c-4d7eec368331")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:30.364" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:30.364" endtime="20220801 14:31:30.528"/>
+<msg timestamp="20220802 23:17:19.898" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:19.897" endtime="20220802 23:17:19.992"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:31.531" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:30.528" endtime="20220801 14:31:31.532"/>
+<msg timestamp="20220802 23:17:21.003" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:19.992" endtime="20220802 23:17:21.003"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:31.534" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="acb4b9aa-07ae-4cb3-abeb-ca05b7215ec1")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:31.533" endtime="20220801 14:31:31.598"/>
+<msg timestamp="20220802 23:17:21.005" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="22117afa-da06-41ae-873c-4d7eec368331")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:21.004" endtime="20220802 23:17:21.067"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:32.614" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:31.598" endtime="20220801 14:31:32.614"/>
+<msg timestamp="20220802 23:17:22.075" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:21.067" endtime="20220802 23:17:22.075"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:32.616" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:32.615" endtime="20220801 14:31:32.975"/>
+<msg timestamp="20220802 23:17:22.077" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:22.076" endtime="20220802 23:17:22.418"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:32.976" endtime="20220801 14:31:33.000"/>
+<status status="PASS" starttime="20220802 23:17:22.418" endtime="20220802 23:17:22.443"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:33.001" endtime="20220801 14:31:36.577"/>
+<status status="PASS" starttime="20220802 23:17:22.443" endtime="20220802 23:17:25.189"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:36.577" endtime="20220801 14:31:36.603"/>
+<status status="PASS" starttime="20220802 23:17:25.189" endtime="20220802 23:17:25.275"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:36.603" endtime="20220801 14:31:36.620"/>
+<status status="PASS" starttime="20220802 23:17:25.276" endtime="20220802 23:17:25.294"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:30.364" endtime="20220801 14:31:36.620"/>
+<status status="PASS" starttime="20220802 23:17:19.897" endtime="20220802 23:17:25.294"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="ba3186bc-469a-4b9f-b851-fa6c9ca83065")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="16063b41-2f51-4268-be89-796a4b77bc4a")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:36.621" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:36.621" endtime="20220801 14:31:36.857"/>
+<msg timestamp="20220802 23:17:25.295" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:25.294" endtime="20220802 23:17:25.428"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:37.868" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:36.858" endtime="20220801 14:31:37.868"/>
+<msg timestamp="20220802 23:17:26.431" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:25.428" endtime="20220802 23:17:26.431"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:37.870" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="ba3186bc-469a-4b9f-b851-fa6c9ca83065")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:37.869" endtime="20220801 14:31:37.934"/>
+<msg timestamp="20220802 23:17:26.433" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="16063b41-2f51-4268-be89-796a4b77bc4a")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:26.432" endtime="20220802 23:17:26.480"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:38.938" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:37.934" endtime="20220801 14:31:38.939"/>
+<msg timestamp="20220802 23:17:27.482" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:26.480" endtime="20220802 23:17:27.482"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:38.940" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:38.939" endtime="20220801 14:31:39.289"/>
+<msg timestamp="20220802 23:17:27.484" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:27.483" endtime="20220802 23:17:27.845"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:39.290" endtime="20220801 14:31:39.313"/>
+<status status="PASS" starttime="20220802 23:17:27.845" endtime="20220802 23:17:27.870"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:39.313" endtime="20220801 14:31:40.809"/>
+<status status="PASS" starttime="20220802 23:17:27.871" endtime="20220802 23:17:30.279"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:40.809" endtime="20220801 14:31:40.834"/>
+<status status="PASS" starttime="20220802 23:17:30.279" endtime="20220802 23:17:30.417"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:40.835" endtime="20220801 14:31:40.849"/>
+<status status="PASS" starttime="20220802 23:17:30.417" endtime="20220802 23:17:30.427"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:36.620" endtime="20220801 14:31:40.849"/>
+<status status="PASS" starttime="20220802 23:17:25.294" endtime="20220802 23:17:30.427"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="736f60cc-ce52-4d28-bcc6-444c76e938e1")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="e9d46d81-5771-4b3f-a403-0e577297e93a")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:40.850" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:40.849" endtime="20220801 14:31:41.052"/>
+<msg timestamp="20220802 23:17:30.428" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:30.427" endtime="20220802 23:17:30.516"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:42.054" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:41.052" endtime="20220801 14:31:42.054"/>
+<msg timestamp="20220802 23:17:31.526" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:30.517" endtime="20220802 23:17:31.526"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:42.056" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="736f60cc-ce52-4d28-bcc6-444c76e938e1")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:42.055" endtime="20220801 14:31:42.090"/>
+<msg timestamp="20220802 23:17:31.528" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="e9d46d81-5771-4b3f-a403-0e577297e93a")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:31.527" endtime="20220802 23:17:31.588"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:43.092" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:42.090" endtime="20220801 14:31:43.092"/>
+<msg timestamp="20220802 23:17:32.594" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:31.588" endtime="20220802 23:17:32.595"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:43.094" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:43.093" endtime="20220801 14:31:43.442"/>
+<msg timestamp="20220802 23:17:32.597" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:32.595" endtime="20220802 23:17:32.928"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:43.443" endtime="20220801 14:31:43.466"/>
+<status status="PASS" starttime="20220802 23:17:32.928" endtime="20220802 23:17:32.954"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:43.466" endtime="20220801 14:31:45.220"/>
+<status status="PASS" starttime="20220802 23:17:32.955" endtime="20220802 23:17:35.388"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:45.220" endtime="20220801 14:31:45.248"/>
+<status status="PASS" starttime="20220802 23:17:35.388" endtime="20220802 23:17:35.468"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:45.248" endtime="20220801 14:31:45.267"/>
+<status status="PASS" starttime="20220802 23:17:35.468" endtime="20220802 23:17:35.483"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:40.849" endtime="20220801 14:31:45.267"/>
+<status status="PASS" starttime="20220802 23:17:30.427" endtime="20220802 23:17:35.484"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="2646ffad-bbd7-4862-8264-1177f0ecb320")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="62fec0dd-a58f-4ed2-a23c-c41dc14fc123")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:45.268" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:45.268" endtime="20220801 14:31:45.472"/>
+<msg timestamp="20220802 23:17:35.485" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:35.484" endtime="20220802 23:17:35.579"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:46.488" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:45.473" endtime="20220801 14:31:46.488"/>
+<msg timestamp="20220802 23:17:36.584" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:35.580" endtime="20220802 23:17:36.585"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:46.490" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="2646ffad-bbd7-4862-8264-1177f0ecb320")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:46.489" endtime="20220801 14:31:46.552"/>
+<msg timestamp="20220802 23:17:36.587" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="62fec0dd-a58f-4ed2-a23c-c41dc14fc123")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:36.585" endtime="20220802 23:17:36.642"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:47.560" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:46.552" endtime="20220801 14:31:47.560"/>
+<msg timestamp="20220802 23:17:37.651" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:36.642" endtime="20220802 23:17:37.651"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:47.562" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:47.561" endtime="20220801 14:31:47.914"/>
+<msg timestamp="20220802 23:17:37.653" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:37.652" endtime="20220802 23:17:37.988"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:47.914" endtime="20220801 14:31:47.938"/>
+<status status="PASS" starttime="20220802 23:17:37.989" endtime="20220802 23:17:38.014"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:47.938" endtime="20220801 14:31:49.651"/>
+<status status="PASS" starttime="20220802 23:17:38.014" endtime="20220802 23:17:40.599"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:49.651" endtime="20220801 14:31:49.783"/>
+<status status="PASS" starttime="20220802 23:17:40.599" endtime="20220802 23:17:40.687"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:49.783" endtime="20220801 14:31:49.794"/>
+<status status="PASS" starttime="20220802 23:17:40.687" endtime="20220802 23:17:40.705"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:45.268" endtime="20220801 14:31:49.794"/>
+<status status="PASS" starttime="20220802 23:17:35.484" endtime="20220802 23:17:40.705"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="35ce0e50-5242-402e-abe5-9641ab1d8c66")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="ee5e18b6-be89-4ec0-8ea6-b5b2a1c8aa7b")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:49.795" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:49.795" endtime="20220801 14:31:50.013"/>
+<msg timestamp="20220802 23:17:40.706" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:40.706" endtime="20220802 23:17:40.841"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:51.024" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:50.014" endtime="20220801 14:31:51.024"/>
+<msg timestamp="20220802 23:17:41.856" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:40.841" endtime="20220802 23:17:41.856"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:51.026" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="35ce0e50-5242-402e-abe5-9641ab1d8c66")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:51.025" endtime="20220801 14:31:51.088"/>
+<msg timestamp="20220802 23:17:41.858" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="ee5e18b6-be89-4ec0-8ea6-b5b2a1c8aa7b")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:41.857" endtime="20220802 23:17:41.912"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:52.093" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:51.088" endtime="20220801 14:31:52.093"/>
+<msg timestamp="20220802 23:17:42.924" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:41.912" endtime="20220802 23:17:42.924"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:52.094" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:52.093" endtime="20220801 14:31:52.430"/>
+<msg timestamp="20220802 23:17:42.927" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:42.925" endtime="20220802 23:17:43.270"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:52.430" endtime="20220801 14:31:52.456"/>
+<status status="PASS" starttime="20220802 23:17:43.270" endtime="20220802 23:17:43.299"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:52.456" endtime="20220801 14:31:54.215"/>
+<status status="PASS" starttime="20220802 23:17:43.299" endtime="20220802 23:17:45.816"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:31:54.215" endtime="20220801 14:31:54.287"/>
+<status status="PASS" starttime="20220802 23:17:45.816" endtime="20220802 23:17:45.893"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:54.288" endtime="20220801 14:31:54.297"/>
+<status status="PASS" starttime="20220802 23:17:45.893" endtime="20220802 23:17:45.908"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:49.794" endtime="20220801 14:31:54.297"/>
+<status status="PASS" starttime="20220802 23:17:40.705" endtime="20220802 23:17:45.908"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="20c7b76c-4676-4538-bde6-baf3ec6823c8")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="f09db862-06d7-4173-a16c-b1280625e3a6")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:54.298" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:31:54.297" endtime="20220801 14:31:54.470"/>
+<msg timestamp="20220802 23:17:45.910" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:45.909" endtime="20220802 23:17:46.000"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:55.477" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:54.471" endtime="20220801 14:31:55.477"/>
+<msg timestamp="20220802 23:17:47.014" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:46.000" endtime="20220802 23:17:47.014"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:55.479" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="20c7b76c-4676-4538-bde6-baf3ec6823c8")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:31:55.478" endtime="20220801 14:31:55.538"/>
+<msg timestamp="20220802 23:17:47.014" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="f09db862-06d7-4173-a16c-b1280625e3a6")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:47.014" endtime="20220802 23:17:47.051"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:31:56.546" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:31:55.538" endtime="20220801 14:31:56.546"/>
+<msg timestamp="20220802 23:17:48.059" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:47.051" endtime="20220802 23:17:48.060"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:31:56.548" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:31:56.547" endtime="20220801 14:31:56.881"/>
+<msg timestamp="20220802 23:17:48.061" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:48.060" endtime="20220802 23:17:48.427"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:31:56.882" endtime="20220801 14:31:56.906"/>
+<status status="PASS" starttime="20220802 23:17:48.428" endtime="20220802 23:17:48.453"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:31:56.906" endtime="20220801 14:32:00.605"/>
+<status status="PASS" starttime="20220802 23:17:48.453" endtime="20220802 23:17:50.692"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:32:00.606" endtime="20220801 14:32:00.728"/>
+<status status="PASS" starttime="20220802 23:17:50.692" endtime="20220802 23:17:50.749"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:32:00.729" endtime="20220801 14:32:00.739"/>
+<status status="PASS" starttime="20220802 23:17:50.750" endtime="20220802 23:17:50.762"/>
 </kw>
-<status status="PASS" starttime="20220801 14:31:54.297" endtime="20220801 14:32:00.739"/>
+<status status="PASS" starttime="20220802 23:17:45.909" endtime="20220802 23:17:50.762"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="d8fae89b-79d7-4634-bbe4-dc0c992a410e")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="e486d973-53fd-426e-9c9a-5a31c4aa3ef2")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:00.741" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:32:00.740" endtime="20220801 14:32:00.976"/>
+<msg timestamp="20220802 23:17:50.763" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:50.763" endtime="20220802 23:17:50.856"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:32:01.979" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:32:00.976" endtime="20220801 14:32:01.979"/>
+<msg timestamp="20220802 23:17:51.860" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:50.857" endtime="20220802 23:17:51.860"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:01.981" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="d8fae89b-79d7-4634-bbe4-dc0c992a410e")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:32:01.980" endtime="20220801 14:32:02.017"/>
+<msg timestamp="20220802 23:17:51.861" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="e486d973-53fd-426e-9c9a-5a31c4aa3ef2")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:51.860" endtime="20220802 23:17:51.894"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:32:03.033" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:32:02.017" endtime="20220801 14:32:03.033"/>
+<msg timestamp="20220802 23:17:52.909" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:51.894" endtime="20220802 23:17:52.909"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:03.035" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:32:03.035" endtime="20220801 14:32:03.402"/>
+<msg timestamp="20220802 23:17:52.911" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:52.910" endtime="20220802 23:17:53.242"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:32:03.402" endtime="20220801 14:32:03.425"/>
+<status status="PASS" starttime="20220802 23:17:53.242" endtime="20220802 23:17:53.268"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:32:03.425" endtime="20220801 14:32:05.218"/>
+<status status="PASS" starttime="20220802 23:17:53.268" endtime="20220802 23:17:55.874"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:32:05.219" endtime="20220801 14:32:05.244"/>
+<status status="PASS" starttime="20220802 23:17:55.875" endtime="20220802 23:17:55.948"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:32:05.245" endtime="20220801 14:32:05.258"/>
+<status status="PASS" starttime="20220802 23:17:55.948" endtime="20220802 23:17:55.964"/>
 </kw>
-<status status="PASS" starttime="20220801 14:32:00.740" endtime="20220801 14:32:05.258"/>
+<status status="PASS" starttime="20220802 23:17:50.762" endtime="20220802 23:17:55.964"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="a6b776f4-c160-42b4-b985-610f7e79136b")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="5daa7cd8-bd70-4838-b22d-a3517778f472")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:05.259" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:32:05.259" endtime="20220801 14:32:05.461"/>
+<msg timestamp="20220802 23:17:55.965" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:17:55.965" endtime="20220802 23:17:56.111"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:32:06.474" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:32:05.461" endtime="20220801 14:32:06.474"/>
+<msg timestamp="20220802 23:17:57.121" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:56.111" endtime="20220802 23:17:57.122"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:06.476" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="a6b776f4-c160-42b4-b985-610f7e79136b")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:32:06.475" endtime="20220801 14:32:06.539"/>
+<msg timestamp="20220802 23:17:57.124" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="5daa7cd8-bd70-4838-b22d-a3517778f472")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:17:57.122" endtime="20220802 23:17:57.213"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:32:07.556" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:32:06.539" endtime="20220801 14:32:07.556"/>
+<msg timestamp="20220802 23:17:58.218" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:17:57.214" endtime="20220802 23:17:58.218"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:07.558" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:32:07.557" endtime="20220801 14:32:07.907"/>
+<msg timestamp="20220802 23:17:58.220" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:17:58.219" endtime="20220802 23:17:58.573"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:32:07.907" endtime="20220801 14:32:07.937"/>
+<status status="PASS" starttime="20220802 23:17:58.573" endtime="20220802 23:17:58.597"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:32:07.937" endtime="20220801 14:32:09.841"/>
+<status status="PASS" starttime="20220802 23:17:58.598" endtime="20220802 23:18:00.796"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:32:09.841" endtime="20220801 14:32:09.909"/>
+<status status="PASS" starttime="20220802 23:18:00.796" endtime="20220802 23:18:00.857"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:32:09.910" endtime="20220801 14:32:09.917"/>
+<status status="PASS" starttime="20220802 23:18:00.858" endtime="20220802 23:18:00.873"/>
 </kw>
-<status status="PASS" starttime="20220801 14:32:05.258" endtime="20220801 14:32:09.918"/>
+<status status="PASS" starttime="20220802 23:17:55.965" endtime="20220802 23:18:00.873"/>
 </iter>
 <iter>
-<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="16c1031e-85bb-411a-8948-4414b922b43b")&gt;</var>
+<var name="${category}">&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="71f589a4-7367-4bf8-a772-bd8770772b41")&gt;</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id='gh-cat-box']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:09.918" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
-<status status="PASS" starttime="20220801 14:32:09.918" endtime="20220801 14:32:10.089"/>
+<msg timestamp="20220802 23:18:00.874" level="INFO">Clicking element '//*[@id='gh-cat-box']'.</msg>
+<status status="PASS" starttime="20220802 23:18:00.873" endtime="20220802 23:18:00.961"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:32:11.101" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:32:10.089" endtime="20220801 14:32:11.101"/>
+<msg timestamp="20220802 23:18:01.973" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:18:00.962" endtime="20220802 23:18:01.973"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:11.103" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a53f4ae52002da31afcbec27667e9277", element="16c1031e-85bb-411a-8948-4414b922b43b")&gt;'.</msg>
-<status status="PASS" starttime="20220801 14:32:11.102" endtime="20220801 14:32:11.165"/>
+<msg timestamp="20220802 23:18:01.975" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="08223fbac7edabd1a7b0d3780e13a0f1", element="71f589a4-7367-4bf8-a772-bd8770772b41")&gt;'.</msg>
+<status status="PASS" starttime="20220802 23:18:01.974" endtime="20220802 23:18:02.038"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220801 14:32:12.172" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220801 14:32:11.165" endtime="20220801 14:32:12.172"/>
+<msg timestamp="20220802 23:18:03.040" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220802 23:18:02.038" endtime="20220802 23:18:03.040"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@value='Search']</arg>
 <arg>CTRL</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220801 14:32:12.173" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
-<status status="PASS" starttime="20220801 14:32:12.172" endtime="20220801 14:32:12.530"/>
+<msg timestamp="20220802 23:18:03.042" level="INFO">Clicking element '//input[@value='Search']' with CTRL.</msg>
+<status status="PASS" starttime="20220802 23:18:03.041" endtime="20220802 23:18:03.392"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:32:12.531" endtime="20220801 14:32:12.553"/>
+<status status="PASS" starttime="20220802 23:18:03.392" endtime="20220802 23:18:03.416"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${TitleName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220801 14:32:12.554" endtime="20220801 14:32:14.410"/>
+<status status="PASS" starttime="20220802 23:18:03.417" endtime="20220802 23:18:06.393"/>
 </kw>
 <kw name="Close Window" library="Selenium2Library">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220801 14:32:14.411" endtime="20220801 14:32:14.475"/>
+<status status="PASS" starttime="20220802 23:18:06.393" endtime="20220802 23:18:06.468"/>
 </kw>
 <kw name="Switch Window" library="Selenium2Library">
 <arg>MAIN</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220801 14:32:14.476" endtime="20220801 14:32:14.485"/>
+<status status="PASS" starttime="20220802 23:18:06.468" endtime="20220802 23:18:06.478"/>
 </kw>
-<status status="PASS" starttime="20220801 14:32:09.918" endtime="20220801 14:32:14.485"/>
+<status status="PASS" starttime="20220802 23:18:00.873" endtime="20220802 23:18:06.478"/>
 </iter>
-<status status="PASS" starttime="20220801 14:29:28.381" endtime="20220801 14:32:14.486"/>
+<status status="PASS" starttime="20220802 23:15:01.007" endtime="20220802 23:18:06.478"/>
 </for>
-<status status="PASS" starttime="20220801 14:29:28.362" endtime="20220801 14:32:14.486"/>
+<status status="PASS" starttime="20220802 23:15:00.942" endtime="20220802 23:18:06.478"/>
 </kw>
 <kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220801 14:32:14.486" endtime="20220801 14:32:17.417"/>
+<status status="PASS" starttime="20220802 23:18:06.484" endtime="20220802 23:18:09.334"/>
 </kw>
 <tag>test7</tag>
-<status status="PASS" starttime="20220801 14:29:18.717" endtime="20220801 14:32:17.419"/>
+<status status="PASS" starttime="20220802 23:14:55.658" endtime="20220802 23:18:09.336"/>
 </test>
-<status status="PASS" starttime="20220801 14:29:18.431" endtime="20220801 14:32:17.422"/>
+<status status="PASS" starttime="20220802 23:14:55.354" endtime="20220802 23:18:09.340"/>
 </suite>
 <statistics>
 <total>
