@@ -30,10 +30,9 @@ Verify Message Screen Displays UnSelected Checkbox
 
 Inbox Is Not Blank
     Page Should Not Contain  You do not have any messages
-    Sleep  1s
 
 Click All Message Checkbox
-    ${passed}  Run Keywords And Return Status  Inbox Is Not Blank
+    ${passed}  Run Keyword And Return Status  Inbox Is Not Blank
     IF  ${passed} == True  Click Element  ${CheckboxAll}
 
 Successfully Select All Checkbox
@@ -44,7 +43,7 @@ Successfully Select All Checkbox
 
 Open Message Content
     [Arguments]  ${message}
-    ${passed}  Run Keywords And Return Status  Inbox Is Not Blank
+    ${passed}  Run Keyword And Return Status  Inbox Is Not Blank
     IF  ${passed} == True  Click Element  ${message}
     Sleep  1s
 
