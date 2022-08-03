@@ -2,7 +2,6 @@
 Library  Selenium2Library
 Resource  ../../PageObjects/SearchPage/keywords.robot
 Resource  ../../PageObjects/Common/keywords.robot
-# Test Setup  Open Ebay Default Search Page
 Test Setup  Open Ebay Home Page
 Test Teardown  Close All Browsers
 
@@ -42,12 +41,12 @@ Successfully Access Right Search Page Each Catgory
     [Tags]  test7
     Verify Each Category On Search Page
 
-Search Item And Add To The Cart
+Successfully Search Item And Add To The Cart
     [Tags]  test8
     Search For  Sneaker
     Choose "Women" As Gender
     Choose "New with tags" As Condition Of Item
     Choose "Price + Shipping: highest first" As Filter Price
-    Display Choosed Item
+    View First Item In New Window
     Add Item To The Cart
 

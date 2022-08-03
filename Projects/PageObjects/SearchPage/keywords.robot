@@ -86,7 +86,6 @@ Choose "${gender}" As Gender
     Sleep  2s
 
 Choose "${conditionType}" As Condition Of Item
-    [Arguments]  ${Conditions}
     Wait Until Page Contains Element  ${ConditionBtn}
     Click Element  ${ConditionBtn}
     Wait Until Page Contains Element  //span[@class= 'filter-menu-button__text' and text()='${conditionType}']
@@ -94,7 +93,7 @@ Choose "${conditionType}" As Condition Of Item
     Sleep  2s
 
 Choose "${price}" As Filter Price
-    Click Element  ${BestMatch}
+    Click Element  ${BestMatchBtn}
     Wait Until Page Contains Element  //a[@class='fake-menu-button__item']/span[text()='${price}']
     Click Element  //a[@class='fake-menu-button__item']/span[text()='${price}']
     Sleep  1s
@@ -107,4 +106,6 @@ View First Item In New Window
 Add Item To The Cart
     Wait Until Page Contains Element  ${AddToCart}
     Click Element  ${AddToCart}
-    Sleep  2s
+    Sleep  1s
+
+Verify Item Was In Cart
